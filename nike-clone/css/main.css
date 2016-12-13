@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.header {
+  position: relative;
+  margin: 0;
+  height: 3.5em;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: white; }
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: none;
+    opacity: .5; }
+  .header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5em;
+    margin: 0 auto; }
+  .header h4 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto; }
+
+.content {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0; }
+
+.footer {
+  position: relative;
+  height: 8em;
+  width: 100%;
+  background: black center right no-repeat;
+  background-size: cover; }
+
+body {
+  margin: 0; }
+
+/*# sourceMappingURL=main.css.map */

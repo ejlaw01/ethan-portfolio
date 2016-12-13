@@ -1,0 +1,13 @@
+@import "libraries/bourbon/bourbon.scss";
+@import "libraries/neat/neat.scss";
+
+@import "modules/_mixins.scss";
+@import "modules/_variables.scss";
+@import "partials/_header.scss";
+@import "partials/_content.scss";
+@import "partials/_footer.scss";
+
+
+body {
+  margin: 0;
+}
