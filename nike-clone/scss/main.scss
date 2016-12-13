@@ -9,5 +9,11 @@
 
 
 body {
+  background-color: $dark;
   margin: 0;
+  font-family: $standard;
+}
+
+.header-font {
+  font-family: $header;
 }

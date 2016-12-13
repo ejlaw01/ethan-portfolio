@@ -1,7 +1,22 @@
+
+
 .footer {
-  position: relative;
-  height: 8em;
-  width: 100%;
-  background: black center right no-repeat;
-  background-size: cover;
+  @include position(relative, null 0 0 0);
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  max-width: 900px;
+  padding: 20px;
+  background: $dark;
+  color: white;
+  ul {
+    flex-grow: 1;
+    font-size: .9em;
+    li {
+      margin-bottom: 4px;
+    }
+  }
+  .spacer {
+    flex-grow: 2;
+  }
 }
