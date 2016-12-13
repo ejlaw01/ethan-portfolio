@@ -44,4 +44,26 @@
       border-radius: 5px;
     }
   }
+  @media screen and (max-width: 550px) {
+    .top-bar {
+      height: 80px;
+      width: 100%;
+      li {
+        padding: 8px;
+      }
+    }
+    .product-bar {
+      display: flex;
+      flex-direction: column;
+      height: 90px;
+      padding: 20px auto;
+      input {
+        width: 95%;
+        margin: auto;
+      }
+      .logo {
+        display: none;
+      }
+    }
+  }
 }

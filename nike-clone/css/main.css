@@ -4,9 +4,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.header-font {
-  font-family: "PT Sans Narrow", sans-serif; }
-
 .header {
   position: relative;
   width: 100%;
@@ -46,6 +43,22 @@ html {
       padding: 5px;
       border: 1px solid #e7e7e7;
       border-radius: 5px; }
+  @media screen and (max-width: 550px) {
+    .header .top-bar {
+      height: 80px;
+      width: 100%; }
+      .header .top-bar li {
+        padding: 8px; }
+    .header .product-bar {
+      display: flex;
+      flex-direction: column;
+      height: 90px;
+      padding: 20px auto; }
+      .header .product-bar input {
+        width: 95%;
+        margin: auto; }
+      .header .product-bar .logo {
+        display: none; } }
 
 .content {
   position: relative;
@@ -79,6 +92,10 @@ html {
     .content .feature-buttons a:last-child {
       padding: 0.8em 1em; }
 
+.header-font {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white; }
+
 .footer {
   position: relative;
   right: 0;
@@ -88,23 +105,30 @@ html {
   justify-content: space-between;
   height: auto;
   max-width: 900px;
+  margin: auto;
   padding: 20px;
   background: #222222;
-  color: white; }
+  color: #666666; }
   .footer ul {
     flex-grow: 1;
-    font-size: .9em; }
+    font-size: .9em;
+    margin: 15px; }
     .footer ul li {
-      margin-bottom: 4px; }
+      margin-bottom: 5px; }
+      .footer ul li:hover {
+        text-decoration: underline; }
   .footer .spacer {
     flex-grow: 2; }
+  @media screen and (max-width: 550px) {
+    .footer {
+      flex-direction: column; } }
+
+::-webkit-scrollbar {
+  display: none; }
 
 body {
-  background-color: #222222;
   margin: 0;
+  background-color: #222222;
   font-family: "Open Sans", sans-serif; }
-
-.header-font {
-  font-family: "PT Sans Narrow", sans-serif; }
 
 /*# sourceMappingURL=main.css.map */

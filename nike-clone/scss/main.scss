@@ -7,13 +7,10 @@
 @import "partials/_content.scss";
 @import "partials/_footer.scss";
 
+::-webkit-scrollbar {display:none;}
 
 body {
-  background-color: $dark;
   margin: 0;
+  background-color: $dark;
   font-family: $standard;
-}
-
-.header-font {
-  font-family: $header;
 }
