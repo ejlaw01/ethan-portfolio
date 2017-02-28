@@ -1,0 +1,29 @@
+@mixin vertical-center {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin horizontal-center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin full-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin background-image($url) {
+  background: url($url) center center no-repeat;
+  background-size: cover;
+}
+
+@mixin filter-position {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
