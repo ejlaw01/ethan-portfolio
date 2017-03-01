@@ -10,10 +10,27 @@
 
 body {
   box-sizing: border-box;
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $black;
+  transition: transform .2s ease-in-out;
+}
+
+.expand {
+  &:hover {
+    transform: scale(1.15);
+    color: $black;
+  }
+  &:visited {
+    text-decoration: none;
   }
 }
 

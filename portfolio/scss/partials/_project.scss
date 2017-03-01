@@ -33,30 +33,44 @@
         p {
           margin-bottom: 10px;
         }
-        a {
-          display: inline-block;
-          text-decoration: none;
-          color: $white;
-          &:hover {
-            text-decoration: underline;
-            color: $white;
-          }
-          &:visited {
-            text-decoration: none;
-          }
-        }
       }
       .image-link {
         flex: 2 65%;
         img {
+          position: relative;
+          z-index: 1;
           width: 100%;
           border: solid white 3px;
-          // @media screen and (min-width: 560px) {
-          //   float: right;
-          //   width: 66%;
-          // }
         }
       }
     }
+  }
+  &::before {
+    @include filter-position;
+    background: $white;
+    filter: grayscale(.5) blur(4px);
+    z-index: -2;
+  }
+  &:after {
+    @include filter-position;
+    opacity: .3;
+    z-index: -1;
+  }
+}
+
+#character-generator {
+  color: white;
+  a {
+    color: white;
+  }
+  &::before {
+    background: $black;
+    background-image: url("../img/character-generator.png");
+    background-size: cover;
+    filter:grayscale(.3) blur(4px);
+  }
+  &:after {
+    background-image: linear-gradient(to bottom, #333333, #000000);
+    opacity: .6;
   }
 }

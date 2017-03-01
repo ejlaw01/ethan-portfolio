@@ -19,9 +19,9 @@
       <div class="landing">
         <div class="nav">
           <ul>
-            <li id="about">About</li>
-            <li id="work">Work</li>
-            <li id="contact">Contact</li>
+            <li id="about"><a class="expand scroll" href="#about-section">About</a></li>
+            <li id="work"><a class="expand scroll" href="#work-section">Work</a></li>
+            <li id="contact"><a class="expand" href="#">Contact</a></li>
           </ul>
         </div>
         <div class="title">
@@ -32,39 +32,47 @@
           </div>
           <div class="contact">
             <h3>ejlaw01@gmail.com</h3>
-            <div class="social">
-              <a href="https://github.com/ejlaw01"><img src="img/github-icon.png" alt="github profile"></a>
-              <a href="https://www.linkedin.com/in/ethan-law"><img src="img/linkedin-icon.png" alt="linkedin profile"></a>
-            </div>
+            <h3>(630) 947-2045</h3>
+            <!-- <div class="social">
+              <a href="https://github.com/ejlaw01">
+                <img src="img/github-icon.png" alt="github profile">
+              </a>
+              <a href="https://www.linkedin.com/in/ethan-law">
+                <img src="img/linkedin-icon.png" alt="linkedin profile">
+              </a>
+            </div> -->
           </div>
         </div>
-        <div class="about">
-          <img class="about-image" src="" alt="">
-          <p class="about-text"></p>
-        </div>
         <div class="down-arrow">
-          <a href="#" id="scroll-down">
+          <a class="arrow-scroll expand scroll" href="#about-section" id="scroll-down">
             <img src="img/arrow.png" alt="scroll down">
           </a>
         </div>
       </div>
-      <div class="project-wrapper">
-        <div class="project">
-          <h2>Dungeons &amp; Dragons<br>Character Generator</h2>
-          <div class="project-content">
-            <div class="project-text">
-              <p>Using Javascript and JQuery, we created a program that does the heavy lifting in creating a player character for D&amp;D 5th Edition.  Users simply choose a race and class, roll ability scores and choose their equipment.  The program will print out your character's stats with all appropriate adjustments and ability score modifiers, attack bonuses and damage, etc.</p>
-              <a href="https://newkirks.github.io/Character-Generator">
-                <p>Live Webpage</p>
-              </a>
-              <br>
-              <a href="https://github.com/NewkirkS/Character-Generator">
-                <p>GitHub Repository</p>
+      <div class="about" id="about-section">
+        <h2>About</h2>
+        <img class="about-image" src="" alt="">
+        <p class="about-text"></p>
+      </div>
+      <div id="work-section">
+        <div class="project-wrapper" id="character-generator">
+          <div class="project">
+            <h2>Dungeons &amp; Dragons<br>Character Generator</h2>
+            <div class="project-content">
+              <div class="project-text">
+                <p>Using Javascript and JQuery, we created a program that does the heavy lifting in creating a player character for D&amp;D 5th Edition.  Users simply choose a race and class, roll ability scores and choose their equipment.  The program will print out your character's stats with all appropriate adjustments and ability score modifiers, attack bonuses and damage, etc.</p>
+                <a class="expand" href="https://newkirks.github.io/Character-Generator">
+                  <p>Live Webpage</p>
+                </a>
+                <br>
+                <a class="expand" href="https://github.com/NewkirkS/Character-Generator">
+                  <p>GitHub Repository</p>
+                </a>
+              </div>
+              <a class="image-link" href="https://newkirks.github.io/Character-Generator">
+                <img src="img/character-generator.png" alt="">
               </a>
             </div>
-            <a class="image-link" href="https://newkirks.github.io/Character-Generator">
-              <img src="img/character-generator.png" alt="">
-            </a>
           </div>
         </div>
       </div>
