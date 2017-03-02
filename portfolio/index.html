@@ -9,7 +9,7 @@
     <title>Ethan Law</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="page">
       <div class="loading">
 
       </div>
@@ -21,7 +21,7 @@
           <ul>
             <li id="about"><a class="expand scroll" href="#about-section">About</a></li>
             <li id="work"><a class="expand scroll" href="#work-section">Work</a></li>
-            <li id="contact"><a class="expand" href="#">Contact</a></li>
+            <li id="contact"><a class="expand scroll" href="#page">Contact</a></li>
           </ul>
         </div>
         <div class="title">
@@ -44,15 +44,19 @@
           </div>
         </div>
         <div class="down-arrow">
-          <a class="arrow-scroll expand scroll" href="#about-section" id="scroll-down">
+          <a class="arrow-scroll expand scroll" href="#about-section">
             <img src="img/arrow.png" alt="scroll down">
           </a>
         </div>
       </div>
       <div class="about" id="about-section">
-        <h2>About</h2>
-        <img class="about-image" src="" alt="">
-        <p class="about-text"></p>
+        <h3>
+          Hey, I'm Ethan.<br>
+          I'm a web developer living and working in Portland, OR.<br>
+          I'm happy to work with you to design a website from scratch<br>
+          or implement a design that's already been created.
+        </h3>
+        <!-- <h5>*hover for more details</h5> -->
       </div>
       <div id="work-section">
         <div class="project-wrapper" id="character-generator">
@@ -69,9 +73,60 @@
                   <p>GitHub Repository</p>
                 </a>
               </div>
-              <a class="image-link" href="https://newkirks.github.io/Character-Generator">
-                <img src="img/character-generator.png" alt="">
-              </a>
+              <div class="images-wrapper">
+                <img class="rotating-picture" src="img/character-generator.png" alt="">
+                <!-- <img class="rotating-picture" src="img/generator-inputs.png" alt=""> -->
+              </div>
+            </div>
+          </div>
+          <div class="down-arrow">
+            <a class="arrow-scroll expand scroll" href="#cold-brew">
+              <img src="img/arrow.png" alt="scroll down">
+            </a>
+          </div>
+        </div>
+        <div class="project-wrapper" id="cold-brew">
+          <div class="project">
+            <h2>Ethan's Cold-Brewed Yerba Mate</h2>
+            <div class="project-content">
+              <div class="project-text">
+                <p>I created this mock product page for a yerba mate beverage using Sass with Bourbon, and a little Javascript for animation. All of the design, copy and branding is my own.</p>
+                <a class="expand" href="https://ejlaw01.github.io/cold-brew-mate/">
+                  <p>Live Webpage</p>
+                </a>
+                <br>
+                <a class="expand" href="https://github.com/ejlaw01/cold-brew-mate">
+                  <p>GitHub Repository</p>
+                </a>
+              </div>
+              <div class="images-wrapper">
+                <img class="rotating-picture" src="img/cold-brew-landing.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="down-arrow">
+            <a class="arrow-scroll expand scroll" href="#dark-sky">
+              <img src="img/arrow-dark.png" alt="scroll down">
+            </a>
+          </div>
+        </div>
+        <div class="project-wrapper" id="dark-sky">
+          <div class="project">
+            <h2>Dark Sky Finder</h2>
+            <div class="project-content">
+              <div class="project-text">
+                <p>Envision prototype for a website that helps users plan stargazing outings and connect with other amateur astronomers. Includes a light pollution map, weather, planetary rise and set times, and social aspects. Functional site is in the works.</p>
+                <a class="expand" href="https://invis.io/3B8PRB4S6#/191302520_Desktop_HD">
+                  <p>Interactive Prototype</p>
+                </a>
+                <br>
+                <a class="expand" href="https://invis.io/3B8PRB4S6#/193217291_Case_Study">
+                  <p>Design Case Study</p>
+                </a>
+              </div>
+              <div class="images-wrapper">
+                <img class="rotating-picture" src="img/dark-sky-landing.png" alt="">
+              </div>
             </div>
           </div>
         </div>

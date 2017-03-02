@@ -4,7 +4,7 @@
   max-height: 100vh;
   .project {
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -34,10 +34,14 @@
           margin-bottom: 10px;
         }
       }
-      .image-link {
+      .images-wrapper {
+        position: relative;
         flex: 2 65%;
+        overflow: visible;
         img {
-          position: relative;
+          // position: absolute;
+          top: 0;
+          left: 0;
           z-index: 1;
           width: 100%;
           border: solid white 3px;
@@ -51,7 +55,7 @@
     filter: grayscale(.5) blur(4px);
     z-index: -2;
   }
-  &:after {
+  &::after {
     @include filter-position;
     opacity: .3;
     z-index: -1;
@@ -65,11 +69,42 @@
   }
   &::before {
     background: $black;
-    background-image: url("../img/character-generator.png");
-    background-size: cover;
+    @include background-image("../img/character-generator.png");
     filter:grayscale(.3) blur(4px);
   }
-  &:after {
+  &::after {
+    background-image: linear-gradient(to bottom, #333333, #000000);
+    opacity: .6;
+  }
+}
+
+#cold-brew {
+  color: black;
+  a {
+    color: black;
+  }
+  &::before {
+    background: $black;
+    @include background-image("../img/cold-brew-landing.png");
+    filter:grayscale(.3) blur(4px);
+  }
+  &::after {
+    background-image: linear-gradient(to bottom, #ffffff, #cccccc);
+    opacity: .6;
+  }
+}
+
+#dark-sky {
+  color: white;
+  a {
+    color: white;
+  }
+  &::before {
+    background: $black;
+    @include background-image("../img/dark-sky-landing.png");
+    filter:grayscale(.3) blur(4px);
+  }
+  &::after {
     background-image: linear-gradient(to bottom, #333333, #000000);
     opacity: .6;
   }
