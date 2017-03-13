@@ -42,14 +42,20 @@
   width: 100%;
   text-align: center;
   color: white;
-  img {
-    height: 20px;
-    width: auto;
-  }
 }
 
 .contact {
   display: none;
+}
+
+.social {
+  position: relative;
+  margin: 0 auto;
+  img {
+    height: 26px;
+    width: 26px;
+    margin: 10px;
+  }
 }
 
 .down-arrow {

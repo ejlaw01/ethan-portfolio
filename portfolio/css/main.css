@@ -134,12 +134,17 @@ a {
   width: 100%;
   text-align: center;
   color: white; }
-  .title img {
-    height: 20px;
-    width: auto; }
 
 .contact {
   display: none; }
+
+.social {
+  position: relative;
+  margin: 0 auto; }
+  .social img {
+    height: 26px;
+    width: 26px;
+    margin: 10px; }
 
 .down-arrow {
   position: absolute;
