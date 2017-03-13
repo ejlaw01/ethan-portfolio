@@ -91,17 +91,18 @@ a {
   display: none; }
 
 .show {
-  display: block !important; }
+  display: block; }
 
 .hide {
-  display: none !important; }
+  display: none; }
 
 .landing {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("../img/splash.jpg") fixed center no-repeat;
+  background: url("../img/splash.jpg") center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   filter: grayscale(0.4); }
   .landing::before {
     content: '';
@@ -222,7 +223,7 @@ a {
     color: white; }
   #character-generator::before {
     background: #181719;
-    background: url("../img/character-generator.png") fixed center no-repeat;
+    background: url("../img/character-generator.png") center center no-repeat;
     background-size: cover;
     filter: grayscale(0.3) blur(4px); }
   #character-generator::after {
@@ -235,7 +236,7 @@ a {
     color: black; }
   #cold-brew::before {
     background: #181719;
-    background: url("../img/cold-brew-landing.png") fixed center no-repeat;
+    background: url("../img/cold-brew-landing.png") center center no-repeat;
     background-size: cover;
     filter: grayscale(0.3) blur(4px); }
   #cold-brew::after {
@@ -248,39 +249,41 @@ a {
     color: white; }
   #dark-sky::before {
     background: #181719;
-    background: url("../img/dark-sky-landing.png") fixed center no-repeat;
+    background: url("../img/dark-sky-landing.png") center center no-repeat;
     background-size: cover;
     filter: grayscale(0.3) blur(4px); }
   #dark-sky::after {
     background-image: linear-gradient(to bottom, #333333, #000000);
     opacity: .6; }
 
-.about {
+.about-wrapper {
   position: relative;
   z-index: 1;
   height: 100vh;
-  max-height: 100vh;
   width: 100%;
-  background-color: white;
-  color: black; }
-  .about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    filter: grayscale(0.5);
-    z-index: -2; }
-  .about::after {
+  background-color: white; }
+  .about-wrapper .about {
+    margin: 80px;
+    color: black;
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0; }
-  .about h3 {
-    line-height: 2em;
-    margin: 5% 10%; }
+    .about-wrapper .about img {
+      position: absolute;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .about-wrapper .about h3 {
+      font-size: 2em;
+      line-height: 2em; }
+      .about-wrapper .about h3:hover + .hide {
+        display: block !important; }
+
+#pie-chart {
+  height: 400px; }
 
 /*# sourceMappingURL=main.css.map */

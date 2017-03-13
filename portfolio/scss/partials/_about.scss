@@ -1,26 +1,30 @@
-.about {
+.about-wrapper {
   position: relative;
   z-index: 1;
   height: 100vh;
-  max-height: 100vh;
   width: 100%;
   background-color: white;
-  color: black;
-  &::before {
+  // opacity: 0;
+  .about {
+    margin: 80px;
+    color: black;
     @include filter-position;
-    // @include background-image('../img/about-imagine.jpg');
-    // background: #f4ece8;
-    filter: grayscale(.5);
-    z-index: -2;
+    img {
+      position: absolute;
+      height: 100%;
+      @include full-center;
+    }
+    h3 {
+      font-size: 2em;
+      line-height: 2em;
+      &:hover + .hide {
+        display: block !important;
+      }
+    }
   }
-  &::after {
-    @include filter-position;
-    // background-image: linear-gradient(to bottom, #333333, #000000);
-    // opacity: .5;
-    // z-index: -1;
-  }
-  h3 {
-    line-height: 2em;
-    margin: 5% 10%;
-  }
+}
+
+
+#pie-chart {
+  height: 400px;
 }

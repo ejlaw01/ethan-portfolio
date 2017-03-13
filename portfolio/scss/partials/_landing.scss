@@ -1,9 +1,9 @@
 .show {
-  display: block !important;
+  display: block;
 }
 
 .hide {
-  display: none !important;
+  display: none;
 }
 
 .landing {
@@ -11,6 +11,7 @@
   height: 100vh;
   width: 100%;
   @include background-image("../img/splash.jpg");
+  background-attachment: fixed;
   filter:grayscale(.4);
   &::before {
     @include filter-position;
