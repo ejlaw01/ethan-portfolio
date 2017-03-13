@@ -62,6 +62,18 @@
   }
 }
 
+
+// .project-info {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 40%;
+// }
+
+// .project-image {
+//
+// }
+
 #character-generator {
   color: white;
   a {
@@ -109,5 +121,6 @@
     opacity: .6;
   }
   #up-arrow {
+    display: none;
   }
 }
