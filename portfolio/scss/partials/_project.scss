@@ -1,126 +1,121 @@
+h2.work-header {
+  position: relative;
+  height: 80px;
+  background: #ffffff;
+  color: black;
+  text-align: center;
+  line-height: 80px;
+  font-size: 3em;
+  font-weight: 300;
+}
+
 .project-wrapper {
   position: relative;
   height: 100vh;
   max-height: 100vh;
-  .project {
+}
+
+.info-wrapper {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10vh;
+  width: 500px;
+  background: white;
+  opacity: .9;
+  z-index: 1;
+  .project-info {
     position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    @include vertical-center;
+    color: black;
+    z-index: 2;
     h2 {
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
+      padding: 0;
+      margin: 40px 10%;
+      font-size: 2em;
     }
-    .project-content {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-direction: row;
-      position: relative;
-      padding: 15px;
-      @media screen and (max-width: 600px) {
-        flex-direction: column-reverse;
-      }
-      & > * {
-        margin: 15px;
-      }
-      .project-text {
-        flex: 1 35%;
-        p {
-          margin-bottom: 10px;
-        }
-      }
-      .images-wrapper {
-        position: relative;
-        flex: 2 65%;
-        overflow: visible;
-        img {
-          // position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          width: 100%;
-          border: solid white 3px;
-        }
-      }
+    p {
+      width: 80%;
+      margin: 20px 10%;
+      font-size: 1.4em;
+    }
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.5em;
+      margin-left: 10%;
+      margin-bottom: 40px;
+    }
+    img {
+      width: 90%;
+      margin: 5%;
     }
   }
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: grayscale(.4);
   &::before {
     @include filter-position;
     background: $white;
-    filter: grayscale(.5) blur(4px);
-    z-index: -2;
+    opacity: .2;
   }
   &::after {
     @include filter-position;
     opacity: .3;
-    z-index: -1;
   }
 }
 
-
-// .project-info {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 40%;
-// }
-
-// .project-image {
-//
-// }
-
-#character-generator {
-  color: white;
-  a {
-    color: white;
-  }
-  &::before {
-    background: $black;
-    @include background-image("../img/character-generator.png");
-    filter:grayscale(.3) blur(4px);
-  }
-  &::after {
-    background-image: linear-gradient(to bottom, #333333, #000000);
-    opacity: .6;
-  }
-}
-
-#cold-brew {
-  color: black;
-  a {
+.more {
+  .project-info {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 40%;
     color: black;
+    background: white;
   }
-  &::before {
-    background: $black;
-    @include background-image("../img/cold-brew-landing.png");
-    filter:grayscale(.3) blur(4px);
-  }
-  &::after {
-    background-image: linear-gradient(to bottom, #ffffff, #cccccc);
-    opacity: .6;
+  .project-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    right: 0;
   }
 }
 
-#dark-sky {
-  color: white;
-  a {
-    color: white;
+#character-generator .project-image {
+  @include background-image("../img/character-generator.png");
+  // color: white;
+  // a {
+  //   color: white;
+  // }
+  // &::before {
+  //   background: $black;
+  //   @include background-image("../img/character-generator.png");
+  //   filter:grayscale(.3) blur(4px);
+  // }
+  // &::after {
+  //   background-image: linear-gradient(to bottom, #333333, #000000);
+  //   opacity: .6;
+  // }
+}
+
+.odd {
+  .info-wrapper {
+    left: auto;
+    right: 10%;
   }
-  &::before {
-    background: $black;
-    @include background-image("../img/dark-sky-landing.png");
-    filter:grayscale(.3) blur(4px);
-  }
-  &::after {
-    background-image: linear-gradient(to bottom, #333333, #000000);
-    opacity: .6;
-  }
-  #up-arrow {
-    display: none;
-  }
+}
+
+#cold-brew .project-image {
+  @include background-image("../img/cold-brew-landing.png");
+}
+
+#dark-sky .project-image {
+  @include background-image("../img/dark-sky-landing.png");
 }

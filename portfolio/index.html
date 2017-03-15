@@ -2,12 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/scripts.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" sizes="16x16">
-    <title>Ethan Law</title>
+    <title>Ethan Law | Web Design &amp; Development</title>
   </head>
   <body>
     <div class="container" id="page">
@@ -32,17 +32,18 @@
             <h3>Portland, OR</h3>
           </div>
           <div class="contact">
-            <h3>ejlaw01@gmail.com</h3>
-            <h3>(630) 947-2045</h3>
+            <h3><a href="mailto:ejlaw01@gmail.com">ejlaw01@gmail.com</a></h3>
+            <h3>&nbsp;</h3>
+            <!-- <h3>(630) 947-2045</h3> -->
           </div>
-          <div class="social">
-            <a href="https://github.com/ejlaw01">
-              <img src="img/github-icon-light.png" alt="github profile">
-            </a>
-            <a href="https://www.linkedin.com/in/ethan-law">
-              <img src="img/linkedin-icon-light.png" alt="linkedin profile">
-            </a>
-          </div>
+        </div>
+        <div class="social">
+          <a href="https://github.com/ejlaw01">
+            <img src="img/github-icon-light.png" alt="github profile">
+          </a>
+          <a href="https://www.linkedin.com/in/ethan-law">
+            <img src="img/linkedin-icon-light.png" alt="linkedin profile">
+          </a>
         </div>
         <div class="down-arrow">
           <a class="arrow-scroll expand scroll" href="#about-section">
@@ -53,7 +54,6 @@
       <div class="about-wrapper" id="about-section">
         <div class="about">
           <div class="text-left">
-            <!-- <img src="img/about-typography.png" alt=""> -->
             <h3 id="hey-im-ethan">
               <span class="font-lg">Hey,&nbsp;</span>
               <span class="font-med">I'm</span><br>
@@ -64,50 +64,53 @@
               <span class="font-med"><span id="web">&nbsp;Web</span><br>Developer</span>
             </h3>
             <h3 id="portland-or">
-              <span class="font-xs">living&nbsp; and&nbsp; working</span><br><span class="font-sm">in Portland, OR.</span>
+              <span class="font-xs">living&nbsp; and&nbsp; working</span><br><span class="font-sm" id="pdx">in <span class="bold">Portland, OR</span>.</span>
             </h3>
           </div>
           <div class="about-detail">
             <div class="initial-text">
               <h4>
-                I am <strong>currently available</strong> for freelance work.
+                I am <span class="bolder">currently available</span> for freelance work.
               </h4>
               <h4>
                 I'm happy to work with you to design a website from scratch or implement a design you already have.
               </h4>
               <h4>
-                Contact me and we can work together.
+                <a href="mailto:ejlaw01@gmail.com">
+                  Contact me
+                </a>
+                and we can work together.
               </h4>
             </div>
-            <div class="ethan-detail">
+            <div id="ethan-detail">
               <img src="img/me-pie-chart.png" alt="">
             </div>
           </div>
         </div>
       </div>
       <div id="work-section">
+        <!-- <h2 class="work-header">Work</h2> -->
         <div class="project-wrapper" id="character-generator">
-          <div class="project-info">
-
-          </div>
-          <div class="project">
-            <h2>Dungeons &amp; Dragons<br>Character Generator</h2>
-            <div class="project-content">
-              <div class="project-text">
-                <p>Using Javascript and JQuery, we created a program that does the heavy lifting in creating a player character for D&amp;D 5th Edition.  Users simply choose a race and class, roll ability scores and choose their equipment.  The program will print out your character's stats with all appropriate adjustments and ability score modifiers, attack bonuses and damage, etc.</p>
-                <a class="expand" href="https://newkirks.github.io/Character-Generator">
-                  <p>Live Webpage</p>
-                </a>
-                <br>
-                <a class="expand" href="https://github.com/NewkirkS/Character-Generator">
-                  <p>GitHub Repository</p>
-                </a>
-              </div>
-              <div class="images-wrapper">
-                <img class="rotating-picture" src="img/character-generator.png" alt="">
-                <!-- <img class="rotating-picture" src="img/generator-inputs.png" alt=""> -->
+          <div class="info-wrapper">
+            <div class="project-info">
+              <h2>Dungeons &amp; Dragons<br>Character Generator</h2>
+              <div class="project-content">
+                <div class="project-text">
+                  <p>Using Javascript and JQuery, we created a program that does the heavy lifting in creating a player character for D&amp;D 5th Edition.  Users simply choose a race and class, roll ability scores and choose their equipment.  The program will print out your character's stats with all appropriate adjustments and ability score modifiers, attack bonuses and damage, etc.</p>
+                  <a class="expand" href="https://newkirks.github.io/Character-Generator">
+                    Live Webpage
+                  </a>
+                  <br>
+                  <a class="expand" href="https://github.com/NewkirkS/Character-Generator">
+                    GitHub Repository
+                  </a>
+                </div>
+                <div class="images-wrapper">
+                </div>
               </div>
             </div>
+          </div>
+          <div class="project-image">
           </div>
           <div class="down-arrow">
             <a class="arrow-scroll expand scroll" href="#cold-brew">
@@ -115,24 +118,25 @@
             </a>
           </div>
         </div>
-        <div class="project-wrapper" id="cold-brew">
-          <div class="project">
-            <h2>Ethan's Cold-Brewed Yerba Mate</h2>
-            <div class="project-content">
-              <div class="project-text">
-                <p>I created this mock product page for a yerba mate beverage using Sass with Bourbon, and a little Javascript for animation. All of the design, copy and branding is my own.</p>
-                <a class="expand" href="https://ejlaw01.github.io/cold-brew-mate/">
-                  <p>Live Webpage</p>
-                </a>
-                <br>
-                <a class="expand" href="https://github.com/ejlaw01/cold-brew-mate">
-                  <p>GitHub Repository</p>
-                </a>
-              </div>
-              <div class="images-wrapper">
-                <img class="rotating-picture" src="img/cold-brew-landing.png" alt="">
+        <div class="project-wrapper odd" id="cold-brew">
+          <div class="info-wrapper">
+            <div class="project-info">
+              <h2>Ethan's Cold-Brewed Yerba Mate</h2>
+              <div class="project-content">
+                <div class="project-text">
+                  <p>I created this mock product page for a yerba mate beverage using Sass with Bourbon, and a little Javascript for animation. All of the design, copy and branding is my own.</p>
+                  <a class="expand" href="https://ejlaw01.github.io/cold-brew-mate/">
+                    Live Webpage
+                  </a>
+                  <br>
+                  <a class="expand" href="https://github.com/ejlaw01/cold-brew-mate">
+                    GitHub Repository
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="project-image">
           </div>
           <div class="down-arrow">
             <a class="arrow-scroll expand scroll" href="#dark-sky">
@@ -141,23 +145,24 @@
           </div>
         </div>
         <div class="project-wrapper" id="dark-sky">
-          <div class="project">
-            <h2>Dark Sky Finder</h2>
-            <div class="project-content">
-              <div class="project-text">
-                <p>Envision prototype for a website that helps users plan stargazing outings and connect with other amateur astronomers. Includes a light pollution map, weather, planetary rise and set times, and social aspects. Functional site is in the works.</p>
-                <a class="expand" href="https://invis.io/3B8PRB4S6#/191302520_Desktop_HD">
-                  <p>Interactive Prototype</p>
-                </a>
-                <br>
-                <a class="expand" href="https://invis.io/3B8PRB4S6#/193217291_Case_Study">
-                  <p>Design Case Study</p>
-                </a>
-              </div>
-              <div class="images-wrapper">
-                <img class="rotating-picture" src="img/dark-sky-landing.png" alt="">
+          <div class="info-wrapper">
+            <div class="project-info">
+              <h2>Dark Sky Finder</h2>
+              <div class="project-content">
+                <div class="project-text">
+                  <p>I made this prototype in Invision for a website that helps users plan stargazing outings and connect with other amateur astronomers. Includes a light pollution map, weather, planetary rise and set times, and social aspects. Functional site is in the works.</p>
+                  <a class="expand" href="https://invis.io/3B8PRB4S6#/191302520_Desktop_HD">
+                    Interactive Prototype
+                  </a>
+                  <br>
+                  <a class="expand" href="https://invis.io/3B8PRB4S6#/193217291_Case_Study">
+                    Design Case Study
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="project-image">
           </div>
           <div class="down-arrow">
             <a class="arrow-scroll expand scroll" href="#page">

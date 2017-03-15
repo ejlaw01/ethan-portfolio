@@ -2,12 +2,12 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: white;
+  background-color: #ffffff;
   .about {
     position: absolute;
     @include full-center;
     width: 1100px;
-    color: black;
+    color: #000000;
   }
 }
 
@@ -15,9 +15,9 @@
   float: left;
   margin-left: 50px;
   margin-right: 100px;
-  text-align: justify;
   h3 {
     margin: 0;
+    text-align: justify;
   }
   img {
     height: 100%;
@@ -37,7 +37,19 @@
     font-size: 28pt;
     margin-bottom: 1.2em;
   }
-  .ethan-detail {
+  .message-me {
+    position: absolute;
+    right: 200px;
+    bottom: -40px;
+    height: 60px;
+    width: 170px;
+    border: 2px solid #D89962;
+    border-radius: 5px;
+    font-size: 1.5em;
+    line-height: 60px;
+    text-align: center;
+  }
+  #ethan-detail {
     display: none;
     position: absolute;
     top: 0;
@@ -64,9 +76,14 @@
   line-height: 3.2em;
 }
 #portland-or {
-  line-height: 2.6em;
+  line-height: 2.8em;
 }
-
+#web {
+  font-size: 58pt;
+}
+#pdx {
+  font-size: 32pt;
+}
 .font-xl {
   font-size: 80pt;
 }
@@ -81,7 +98,4 @@
 }
 .font-xs {
   font-size: 26pt;
-}
-#web {
-  font-size: 58pt;
 }

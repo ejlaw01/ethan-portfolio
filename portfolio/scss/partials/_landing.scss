@@ -10,20 +10,19 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  @include background-image("../img/splash.jpg");
+  @include background-image("../img/about-imagine.jpg");
   background-attachment: fixed;
-  filter:grayscale(.4);
+  filter:grayscale(.5);
   &::before {
     @include filter-position;
-    background: linear-gradient(to bottom, #ffffff, #333333);
-    opacity: .6;
+    background: linear-gradient(to bottom, #ffffff, #000000);
+    opacity: .65;
   }
 }
 
 .nav {
   position: relative;
   z-index: 1;
-  opacity: .6;
   ul {
     list-style: none;
     li {
@@ -31,6 +30,7 @@
       padding: 20px 30px;
       a {
         color: black;
+        font-weight: 400;
       }
     }
   }
@@ -46,11 +46,16 @@
 
 .contact {
   display: none;
+  a {
+    color: white;
+  }
 }
 
 .social {
-  position: relative;
+  position: absolute;
   margin: 0 auto;
+  bottom: 40px;
+  right: 55px;
   img {
     height: 26px;
     width: 26px;
@@ -62,6 +67,7 @@
   position: absolute;
   @include horizontal-center;
   bottom: 5%;
+  z-index: 3;
   a {
     height: 50px;
     width: 80px;

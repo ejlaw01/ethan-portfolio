@@ -15,19 +15,20 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+  font-weight: 300;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
   color: $black;
-  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, color .5s ease-in-out;
 }
 
 .expand {
   &:hover {
-    transform: scale(1.15);
-    color: $black;
+    transform: scale(1.1);
+    color: black;
   }
   &:visited {
     text-decoration: none;
@@ -40,6 +41,14 @@ a {
 
 .static-elements {
   display: none;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.bolder {
+  font-weight: 600;
 }
 
 @import "partials/_landing.scss";
