@@ -3,17 +3,18 @@
   height: 100vh;
   width: 100%;
   background-color: #ffffff;
-  .about {
-    position: absolute;
-    @include full-center;
-    width: 1100px;
-    color: #000000;
-  }
 }
 
-.text-left {
+.about {
+  position: absolute;
+  @include full-center;
+  width: 1100px;
+  color: #000000;
+}
+
+.about-left {
   float: left;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-right: 100px;
   h3 {
     margin: 0;
@@ -25,7 +26,7 @@
   }
 }
 
-.about-detail {
+.about-right {
   position: relative;
   float: left;
   height: 100%;
@@ -49,7 +50,7 @@
     line-height: 60px;
     text-align: center;
   }
-  #ethan-detail {
+  .about-detail {
     display: none;
     position: absolute;
     top: 0;
@@ -66,14 +67,62 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .about {
+    width: 950px;
+  }
+  .about-left {
+    transform: scale(.8);
+    margin-right: 70px;
+  }
+  .about-right {
+    margin-top: 70px;
+    width: 400px;
+    h4 {
+      font-size: 20pt;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-wrapper {
+    height: 1200px;
+  }
+  .about {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 30px;
+    width: 350px;
+  }
+  .about-left {
+    float: none;
+    position: relative;
+    top: 50px;
+    left: 25px;
+    transform: scale(1.2);
+    margin: 0 auto;
+  }
+  .about-right {
+    float: none;
+    position: relative;
+    top: 80px;
+    left: -10px;
+    width: 370px;
+    h4 {
+      font-size: 24pt;
+    }
+  }
+}
+
+
 #hey-im-ethan {
   line-height: 4.5em;
-  &:hover .ethan-detail {
-    display: block;
-  }
+  cursor:  pointer;
 }
 #web-developer {
   line-height: 3.2em;
+  // cursor:  pointer;
 }
 #portland-or {
   line-height: 2.8em;
@@ -99,3 +148,20 @@
 .font-xs {
   font-size: 26pt;
 }
+
+// @media screen and (max-width: 1000px) {
+//   .about-wrapper .about {
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     transform: none;
+//     width: 100%;
+//   }
+//   .text-left, .about-detail {
+//     position: relative;
+//     height: auto;
+//     width: 310px;
+//     margin: 0 auto;
+//     float: none;
+//   }
+// }

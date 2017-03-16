@@ -15,6 +15,9 @@
 
 
 $(document).ready(function(){
+
+  var viewHeight = parseInt($(window).height());
+
   var counter = 1;
   $('#contact').click(function(){
     var self = this;
@@ -38,12 +41,24 @@ $(document).ready(function(){
       scrollTop: $( $.attr(this, 'href') ).offset().top+.5
     }, 500);
   });
-  
-  // $('#hey-im-ethan').mouseover(function(){
-  //   $('#ethan-detail').css('display', 'block');
+
+  // $(window).scroll(function() {
+  //   if (parseInt($(window).scrollTop()) > viewHeight*2) {
+  //   }
   // });
-  // $('#hey-im-ethan').mouseout(function(){
-  //   $('#ethan-detail').css('display', 'none');
-  // });
+
+  $('#hey-im-ethan').click(function(){
+    $('#ethan-detail').fadeIn('slow', function(){    });
+  });
+  $('#hey-im-ethan').mouseout(function(){
+    $('#ethan-detail').fadeOut('slow', function(){});
+  });
+
+  $('#web-developer').click(function(){
+    $('#dev-detail').fadeIn('slow', function(){    });
+  });
+  $('#web-developer').mouseout(function(){
+    $('#dev-detail').fadeOut('slow', function(){});
+  });
 
 });

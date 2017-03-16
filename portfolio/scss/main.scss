@@ -22,12 +22,12 @@ a {
   display: inline-block;
   text-decoration: none;
   color: $black;
-  transition: transform .2s ease-in-out, color .5s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 
 .expand {
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
     color: black;
   }
   &:visited {
