@@ -37,10 +37,14 @@ $(document).ready(function(){
   $(document).on('click', 'a.scroll', function(event){
     event.preventDefault();
     $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top+0
+      scrollTop: $( $.attr(this, 'href') ).offset().top+.5
     }, 500);
   });
 
+  // $(window).scroll(function() {
+  //   if (parseInt($(window).scrollTop()) > viewHeight*2) {
+  //   }
+  // });
 
   $('#hey-im-ethan').click(function(){
     $('#ethan-detail').fadeIn('slow', function(){    });

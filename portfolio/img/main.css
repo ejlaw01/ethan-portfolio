@@ -113,7 +113,6 @@ a {
   background: url("../img/about-imagine.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-filter: grayscale(0.5);
   filter: grayscale(0.5); }
   .landing::before {
     content: '';
@@ -237,7 +236,6 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-filter: grayscale(0.4);
   filter: grayscale(0.4); }
   .project-image::before {
     content: '';
@@ -336,7 +334,7 @@ a {
       left: 50%;
       transform: translate(-50%, -50%); }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   .about {
     width: 950px; }
 

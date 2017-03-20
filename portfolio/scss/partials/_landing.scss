@@ -12,6 +12,7 @@
   width: 100%;
   @include background-image("../img/about-imagine.jpg");
   background-attachment: fixed;
+  -webkit-filter: grayscale(.5);
   filter:grayscale(.5);
   &::before {
     @include filter-position;

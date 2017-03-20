@@ -67,6 +67,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  -webkit-filter: grayscale(.4);
   filter: grayscale(.4);
   &::before {
     @include filter-position;
