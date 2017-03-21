@@ -32,32 +32,35 @@
   background: white;
   opacity: .9;
   z-index: 1;
-  .project-info {
-    position: absolute;
-    @include vertical-center;
-    color: black;
-    z-index: 2;
-    h2 {
-      padding: 0;
-      margin: 40px 10%;
-      font-size: 2em;
-    }
-    p {
-      width: 80%;
-      margin: 20px 10%;
-      font-size: 1.4em;
-      margin-bottom: 35px;
-    }
-    a {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.5em;
-      margin-left: 10%;
-      margin-bottom: 35px;
-    }
-    img {
-      width: 90%;
-      margin: 5%;
-    }
+}
+
+.project-info {
+  position: absolute;
+  @include vertical-center;
+  color: black;
+  z-index: 2;
+  h2 {
+    padding: 0;
+    margin: 40px 10%;
+    font-size: 2em;
+    width: 80%;
+  }
+  p {
+    width: 80%;
+    margin: 20px 10%;
+    font-size: 1.4em;
+    margin-bottom: 35px;
+  }
+  a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+    margin-left: 10%;
+    width: 80%;
+    margin-bottom: 35px;
+  }
+  img {
+    width: 90%;
+    margin: 5%;
   }
 }
 
@@ -96,5 +99,29 @@
   .info-wrapper {
     left: auto;
     right: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-wrapper {
+    @include full-center;
+    width: 400px;
+  }
+  .odd .info-wrapper {
+    @include full-center;
+  }
+  .project-info {
+    h2 {
+      font-size: 1.7em;
+    }
+    p, a {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info-wrapper {
+    width: 350px;
   }
 }

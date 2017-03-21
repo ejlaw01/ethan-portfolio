@@ -27,6 +27,8 @@ a {
 
 .expand {
   &:hover {
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
     transform: scale(1.06);
     color: black;
   }

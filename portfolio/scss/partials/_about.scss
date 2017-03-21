@@ -38,6 +38,11 @@
     font-size: 28pt;
     margin-bottom: 1.2em;
   }
+  h5 {
+    font-size: 14pt;
+    text-align: right;
+    margin-right: 10px;
+  }
   .message-me {
     position: absolute;
     right: 200px;
@@ -67,11 +72,13 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .about {
     width: 950px;
   }
   .about-left {
+    -webkit-transform: scale(.8);
+    -ms-transform: scale(.8);
     transform: scale(.8);
     margin-right: 70px;
   }
@@ -91,6 +98,8 @@
   .about {
     position: absolute;
     left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     top: 30px;
     width: 350px;
@@ -100,6 +109,8 @@
     position: relative;
     top: 50px;
     left: 25px;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
     margin: 0 auto;
   }
@@ -111,6 +122,28 @@
     width: 370px;
     h4 {
       font-size: 24pt;
+    }
+    h5 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-wrapper {
+    height: 1030px;
+  }
+  .about-left {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .about-right {
+    top: 20px;
+    left: 25px;
+    width: 330px;
+    h4 {
+      font-size: 20pt;
     }
   }
 }
@@ -148,20 +181,3 @@
 .font-xs {
   font-size: 26pt;
 }
-
-// @media screen and (max-width: 1000px) {
-//   .about-wrapper .about {
-//     position: relative;
-//     top: 0;
-//     left: 0;
-//     transform: none;
-//     width: 100%;
-//   }
-//   .text-left, .about-detail {
-//     position: relative;
-//     height: auto;
-//     width: 310px;
-//     margin: 0 auto;
-//     float: none;
-//   }
-// }
