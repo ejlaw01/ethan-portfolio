@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  text-align: right;
+  color: black;
+  background: white; }
+  .header ul {
+    display: flex; }
+    .header ul li {
+      padding: 10px;
+      margin: auto; }
+  .header img {
+    height: 15px; }
+  .header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: .8em;
+    border-bottom: 1px solid #e7e7e7; }
+  .header .product-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "PT Sans Narrow", sans-serif; }
+    .header .product-bar img {
+      height: 100%;
+      width: auto; }
+    .header .product-bar input {
+      height: 3em;
+      margin: auto 0;
+      padding: 5px;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px; }
+  @media screen and (max-width: 550px) {
+    .header .top-bar {
+      height: 80px;
+      width: 100%; }
+      .header .top-bar li {
+        padding: 8px; }
+    .header .product-bar {
+      display: flex;
+      flex-direction: column;
+      height: 90px;
+      padding: 20px auto; }
+      .header .product-bar input {
+        width: 95%;
+        margin: auto; }
+      .header .product-bar .logo {
+        display: none; } }
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+  background: url("../img/run-forever.jpg") center center no-repeat;
+  background-size: cover; }
+  .content h1 {
+    padding-bottom: 10px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 3.5em;
+    color: #222222; }
+  .content p {
+    font-size: .9em; }
+  .content .feature-buttons a {
+    position: relative;
+    top: 40px;
+    right: 0;
+    background-color: #222222;
+    border-radius: 5px;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: white;
+    text-decoration: none; }
+    .content .feature-buttons a:first-child {
+      padding: 0.8em 3em; }
+    .content .feature-buttons a:last-child {
+      padding: 0.8em 1em; }
+
+.header-font {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: white; }
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #222222;
+  color: #666666; }
+  .footer ul {
+    flex-grow: 1;
+    font-size: .9em;
+    margin: 15px; }
+    .footer ul li {
+      margin-bottom: 5px; }
+      .footer ul li:hover {
+        text-decoration: underline; }
+  .footer .spacer {
+    flex-grow: 2; }
+  @media screen and (max-width: 550px) {
+    .footer {
+      flex-direction: column; } }
+
+::-webkit-scrollbar {
+  display: none; }
+
+body {
+  margin: 0;
+  background-color: #222222;
+  font-family: "Open Sans", sans-serif; }
+
+/*# sourceMappingURL=main.css.map */

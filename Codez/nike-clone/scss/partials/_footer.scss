@@ -1,0 +1,33 @@
+.header-font {
+  font-family: $header;
+  color: white;
+}
+
+.footer {
+  @include position(relative, null 0 0 0);
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: $dark;
+  color: $subtle-text;
+  ul {
+    flex-grow: 1;
+    font-size: .9em;
+    margin: 15px;
+    li {
+      margin-bottom: 5px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .spacer {
+    flex-grow: 2;
+  }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
