@@ -39,7 +39,7 @@
     margin-bottom: 1.2em;
   }
   h5 {
-    font-size: 14pt;
+    font-size: 18pt;
     text-align: right;
     margin-right: 10px;
   }
@@ -93,7 +93,7 @@
 
 @media screen and (max-width: 800px) {
   .about-wrapper {
-    height: 1200px;
+    height: 1100px;
   }
   .about {
     position: absolute;
@@ -109,19 +109,19 @@
     position: relative;
     top: 50px;
     left: 25px;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     margin: 0 auto;
   }
   .about-right {
     float: none;
     position: relative;
-    top: 80px;
-    left: -10px;
-    width: 370px;
+    top: 20px;
+    left: 25px;
+    width: 330px;
     h4 {
-      font-size: 24pt;
+      font-size: 20pt;
     }
     h5 {
       display: none;
@@ -129,24 +129,6 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .about-wrapper {
-    height: 1030px;
-  }
-  .about-left {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  .about-right {
-    top: 20px;
-    left: 25px;
-    width: 330px;
-    h4 {
-      font-size: 20pt;
-    }
-  }
-}
 
 
 #hey-im-ethan {

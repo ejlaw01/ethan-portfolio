@@ -210,7 +210,8 @@ a {
   top: 10%;
   bottom: 10%;
   left: 10vh;
-  min-height: 600px;
+  min-height: 70vh;
+  max-height: 100vh;
   width: 500px;
   background: white;
   opacity: .9;
@@ -232,14 +233,17 @@ a {
   .project-info p {
     width: 80%;
     margin: 20px 10%;
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-bottom: 35px; }
   .project-info a {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4em;
     margin-left: 10%;
     width: 80%;
-    margin-bottom: 35px; }
+    margin-bottom: 35px;
+    color: slategrey; }
+    .project-info a:hover {
+      text-decoration: underline; }
   .project-info img {
     width: 90%;
     margin: 5%; }
@@ -348,7 +352,7 @@ a {
     font-size: 28pt;
     margin-bottom: 1.2em; }
   .about-right h5 {
-    font-size: 14pt;
+    font-size: 18pt;
     text-align: right;
     margin-right: 10px; }
   .about-right .message-me {
@@ -397,7 +401,7 @@ a {
       font-size: 20pt; } }
 @media screen and (max-width: 800px) {
   .about-wrapper {
-    height: 1200px; }
+    height: 1100px; }
 
   .about {
     position: absolute;
@@ -413,36 +417,21 @@ a {
     position: relative;
     top: 50px;
     left: 25px;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
     margin: 0 auto; }
 
   .about-right {
     float: none;
     position: relative;
-    top: 80px;
-    left: -10px;
-    width: 370px; }
-    .about-right h4 {
-      font-size: 24pt; }
-    .about-right h5 {
-      display: none; } }
-@media screen and (max-width: 600px) {
-  .about-wrapper {
-    height: 1030px; }
-
-  .about-left {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-
-  .about-right {
     top: 20px;
     left: 25px;
     width: 330px; }
     .about-right h4 {
-      font-size: 20pt; } }
+      font-size: 20pt; }
+    .about-right h5 {
+      display: none; } }
 #hey-im-ethan {
   line-height: 4.5em;
   cursor: pointer; }
