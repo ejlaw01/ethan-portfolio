@@ -75,8 +75,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-filter: grayscale(.4);
-  filter: grayscale(.4);
+  -webkit-filter: grayscale(.1);
+  filter: grayscale(.1);
   &::before {
     @include filter-position;
     background: $white;
@@ -93,11 +93,11 @@
 }
 
 #cold-brew .project-image {
-  @include background-image("../img/cold-brew-landing.png");
+  @include background-image("../img/mate-with-logo.png");
 }
 
 #dark-sky .project-image {
-  @include background-image("../img/dark-sky-landing.png");
+  @include background-image("../img/dark-sky-hero-background.png");
 }
 
 .odd {
