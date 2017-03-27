@@ -72,6 +72,25 @@
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .about {
+    width: 1000px;
+  }
+  .about-left {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+    margin-right: 75px;
+  }
+  .about-right {
+    margin-top: 50px;
+    width: 440px;
+    h4 {
+      font-size: 23pt;
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .about {
     width: 950px;

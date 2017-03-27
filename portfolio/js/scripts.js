@@ -2,9 +2,10 @@
 // var developer = function() {
 //   for (var day = 0; day < 7; day++) {
 //     if (day < 5) {
-//       alarm(hitSnooze());
+//       alarm(snooze());
 //       drinkMate(yerba.bitter, water.hot);
 //       code(Javascript(JQuery || Angular2), HTML5, CSS3);
+//       git(commit(""));
 //     } else {
 //       dAndD(roll(20));
 //       goHiking(nature);
@@ -54,6 +55,39 @@ $(document).ready(function(){
   });
   $('#web-developer').mouseout(function(){
     $('#dev-detail').fadeOut('slow', function(){});
+  });
+
+  $('#character-generator-more').click(function() {
+    $('#character-generator-title').fadeOut('fast', function() {
+      $('#character-generator-info').fadeIn('slow');
+    });
+  });
+  $('#character-generator-info-close').click(function() {
+    $('#character-generator-info').fadeOut('fast', function() {
+      $('#character-generator-title').fadeIn('slow');
+    });
+  });
+
+  $('#cold-brew-more').click(function() {
+    $('#cold-brew-title').fadeOut('fast', function() {
+      $('#cold-brew-info').fadeIn('slow');
+    });
+  });
+  $('#cold-brew-info-close').click(function() {
+    $('#cold-brew-info').fadeOut('fast', function() {
+      $('#cold-brew-title').fadeIn('slow');
+    });
+  });
+
+  $('#dark-sky-more').click(function() {
+    $('#dark-sky-title').fadeOut('fast', function() {
+      $('#dark-sky-info').fadeIn('slow');
+    });
+  });
+  $('#dark-sky-info-close').click(function() {
+    $('#dark-sky-info').fadeOut('fast', function() {
+      $('#dark-sky-title').fadeIn('slow');
+    });
   });
 
 });

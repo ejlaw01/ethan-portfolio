@@ -22,17 +22,92 @@
   max-height: 100vh;
 }
 
+.project-title {
+  position: absolute;
+  @include full-center;
+  top: 50%;
+  height: 470px;
+  z-index: 1;
+  img {
+    position: absolute;;
+    @include horizontal-center;
+    height: 300px;
+    opacity: 1;
+  }
+  svg {
+    position: absolute;
+    @include horizontal-center;
+    top: 320px;
+    max-width: 75vw;
+  }
+  a {
+    position: absolute;
+    @include horizontal-center;
+    bottom: 0;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, .6);
+  }
+}
+
+.shrink {
+
+}
+
+.light {
+  h2 {
+    color: black;
+  }
+  &::after {
+    @include filter-position;
+    background: white;
+    opacity: .2;
+  }
+}
+
+.dark {
+  a {
+    color: white;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, .4);
+  }
+}
+
 .info-wrapper {
   position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: 10vh;
-  min-height: 70vh;
-  max-height: 100vh;
+  top: 0;
+  bottom: 0;
+  @include horizontal-center;
+  height: 100vh;
   width: 500px;
   background: white;
-  opacity: .9;
+  opacity: .94;
   z-index: 1;
+  display: none;
+  a.close {
+    position: absolute;
+    top: 10px;
+    right: -65px;
+    margin: 10px;
+    padding: 6px 10px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .6);
+    color: #555555;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 4;
+    @media screen and (max-width: 640px) {
+      top: auto;
+      right: 10px;
+      top: 0px;
+    }
+  }
 }
 
 .project-info {
@@ -40,6 +115,9 @@
   @include vertical-center;
   color: black;
   z-index: 2;
+}
+
+.project-content {
   h2 {
     padding: 0;
     margin: 40px 10%;
@@ -53,12 +131,13 @@
     margin-bottom: 35px;
   }
   a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4em;
+    display: inline-block;
     margin-left: 10%;
-    width: 80%;
     margin-bottom: 35px;
-    color: slategrey;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
     &:hover {
       text-decoration: underline;
     }
@@ -88,45 +167,32 @@
   }
 }
 
-#character-generator .project-image {
-  @include background-image("../img/tiamet.jpg");
-}
-
-#cold-brew .project-image {
-  @include background-image("../img/mate-with-logo.png");
-}
-
-#dark-sky .project-image {
-  @include background-image("../img/dark-sky-hero-background.png");
-}
-
-.odd {
-  .info-wrapper {
-    left: auto;
-    right: 10%;
+#character-generator {
+  .project-image {
+    @include background-image("../img/tiamet.jpg");
   }
 }
 
-@media screen and (max-width: 600px) {
+#cold-brew  {
+  .project-image {
+    @include background-image("../img/mate-with-text.png");
+  }
+  .project-title a {
+    border: 2px solid #aaaaaa;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .17);
+  }
+}
+
+#dark-sky {
+  .project-image {
+    @include background-image("../img/dark-sky-hero-background.png");
+  }
+}
+
+
+@media screen and (max-width: 500px) {
   .info-wrapper {
-    @include full-center;
     width: 400px;
-  }
-  .odd .info-wrapper {
-    @include full-center;
-  }
-  .project-info {
-    h2 {
-      font-size: 1.7em;
-    }
-    p, a {
-      font-size: 1.2em;
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .info-wrapper {
-    width: 350px;
   }
 }
