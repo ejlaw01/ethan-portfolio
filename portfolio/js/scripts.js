@@ -35,6 +35,7 @@ $(document).ready(function(){
     console.log(counter);
   });
 
+
   $(document).on('click', 'a.scroll', function(event){
     event.preventDefault();
     $('html, body').animate({
@@ -57,36 +58,18 @@ $(document).ready(function(){
     $('#dev-detail').fadeOut('slow', function(){});
   });
 
-  $('#character-generator-more').click(function() {
-    $('#character-generator-title').fadeOut('fast', function() {
-      $('#character-generator-info').fadeIn('slow');
-    });
-  });
-  $('#character-generator-info-close').click(function() {
-    $('#character-generator-info').fadeOut('fast', function() {
-      $('#character-generator-title').fadeIn('slow');
+
+  $('.more').click(function(){
+    var project = $(this).parents('.project-wrapper').attr('id');
+    $('#' + project + '-title').fadeOut('fast', function() {
+      $('#' + project + '-info').fadeIn('slow');
     });
   });
 
-  $('#cold-brew-more').click(function() {
-    $('#cold-brew-title').fadeOut('fast', function() {
-      $('#cold-brew-info').fadeIn('slow');
-    });
-  });
-  $('#cold-brew-info-close').click(function() {
-    $('#cold-brew-info').fadeOut('fast', function() {
-      $('#cold-brew-title').fadeIn('slow');
-    });
-  });
-
-  $('#dark-sky-more').click(function() {
-    $('#dark-sky-title').fadeOut('fast', function() {
-      $('#dark-sky-info').fadeIn('slow');
-    });
-  });
-  $('#dark-sky-info-close').click(function() {
-    $('#dark-sky-info').fadeOut('fast', function() {
-      $('#dark-sky-title').fadeIn('slow');
+  $('.close').click(function(){
+    var project = $(this).parents('.project-wrapper').attr('id');
+    $('#' + project + '-info').fadeOut('fast', function() {
+      $('#' + project + '-title').fadeIn('slow');
     });
   });
 

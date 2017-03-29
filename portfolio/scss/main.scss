@@ -22,7 +22,8 @@ a {
   display: inline-block;
   text-decoration: none;
   color: $black;
-  transition: transform .5s ease-in, color .8s ease-in;
+  transition: transform .5s ease-in, color .5s ease-in;
+  cursor: pointer;
 }
 
 .expand {

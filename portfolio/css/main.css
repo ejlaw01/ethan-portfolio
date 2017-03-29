@@ -80,7 +80,8 @@ a {
   display: inline-block;
   text-decoration: none;
   color: #181719;
-  transition: transform .5s ease-in, color .8s ease-in; }
+  transition: transform .5s ease-in, color .5s ease-in;
+  cursor: pointer; }
 
 .expand:hover {
   -webkit-transform: scale(1.1);
