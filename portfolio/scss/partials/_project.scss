@@ -19,7 +19,14 @@
 .project-wrapper {
   position: relative;
   height: 100vh;
-  max-height: 100vh;
+  width: 100vw;
+  -webkit-filter: grayscale(.1);
+  filter: grayscale(.1);
+  &::before {
+    @include filter-position;
+    background: $white;
+    opacity: .2;
+  }
 }
 
 .project-title {
@@ -27,9 +34,10 @@
   @include full-center;
   top: 50%;
   height: 470px;
-  z-index: 1;
+  -webkit-transition: left .8s ease-in-out, height .8s ease-in-out, transform .8s ease-in-out;
+  transition: left .8s ease-in-out, height .8s ease-in-out, transform .8s ease-in-out;
   img {
-    position: absolute;;
+    position: absolute;
     @include horizontal-center;
     height: 300px;
     opacity: 1;
@@ -43,7 +51,7 @@
   a {
     position: absolute;
     @include horizontal-center;
-    bottom: 0;
+    top: 425px;
     border: 2px solid black;
     border-radius: 3px;
     font-size: 1.4em;
@@ -55,18 +63,18 @@
   }
 }
 
-.shrink {
-
+.spin {
+  height: 300px;
+  left: 75%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
+
 .light {
-  h2 {
-    color: black;
-  }
-  &::after {
-    @include filter-position;
-    background: white;
-    opacity: .2;
+  &::before {
+    opacity: .4;
   }
 }
 
@@ -81,14 +89,16 @@
 .info-wrapper {
   position: absolute;
   top: 0;
+  left: 0;
   bottom: 0;
-  @include horizontal-center;
   height: 100vh;
-  width: 500px;
+  width: 50%;
   background: white;
-  opacity: .94;
-  z-index: 1;
+  opacity: 1;
   display: none;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
   a.close {
     position: absolute;
     top: 10px;
@@ -101,8 +111,7 @@
     color: #555555;
     font-weight: 400;
     cursor: pointer;
-    z-index: 4;
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 600px) {
       top: auto;
       right: 10px;
       top: 0px;
@@ -110,17 +119,31 @@
   }
 }
 
+.odd {
+  left: 50%;
+  a.close {
+    right: auto;
+    left: -65px;
+
+  }
+  .spin {
+    left: 25%;
+  }
+}
+
 .project-info {
   position: absolute;
-  @include vertical-center;
+  @include full-center;
+  width: 90%;
   color: black;
-  z-index: 2;
 }
 
 .project-content {
+  max-width: 550px;
   h2 {
     padding: 0;
     margin: 40px 10%;
+    margin-top: 0px;
     font-size: 2em;
     width: 80%;
   }
@@ -148,51 +171,22 @@
   }
 }
 
-.project-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-filter: grayscale(.1);
-  filter: grayscale(.1);
-  &::before {
-    @include filter-position;
-    background: $white;
-    opacity: .2;
-  }
-  &::after {
-    @include filter-position;
-    opacity: .3;
-  }
-}
-
 #character-generator {
-  .project-image {
     @include background-image("../img/tiamet.jpg");
-  }
 }
 
 #cold-brew  {
-  .project-image {
     @include background-image("../img/mate-with-text.png");
-  }
+    // @include background-image("../img/just-mate-background-wide.png");
   .project-title a {
     border: 2px solid #aaaaaa;
     color: #ffffff;
     background-color: rgba(0, 0, 0, .17);
   }
+  a.more {
+  }
 }
 
 #dark-sky {
-  .project-image {
     @include background-image("../img/dark-sky-hero-background.png");
-  }
-}
-
-
-@media screen and (max-width: 500px) {
-  .info-wrapper {
-    width: 400px;
-  }
 }

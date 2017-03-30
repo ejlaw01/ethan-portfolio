@@ -52,7 +52,7 @@ $(document).ready(function(){
   });
 
   $('#web-developer').click(function(){
-    $('#dev-detail').fadeIn('slow', function(){    });
+    $('#dev-detail').fadeIn('slow', function(){});
   });
   $('#web-developer').mouseout(function(){
     $('#dev-detail').fadeOut('slow', function(){});
@@ -61,16 +61,19 @@ $(document).ready(function(){
 
   $('.more').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
-    $('#' + project + '-title').fadeOut('fast', function() {
-      $('#' + project + '-info').fadeIn('slow');
-    });
+    $('#' + project + '-title').addClass('spin');
+    $('#' + project + '-title').children('svg, a.more').fadeOut(100);
+    $('#' + project + '-info').fadeIn(800);
   });
 
   $('.close').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
-    $('#' + project + '-info').fadeOut('fast', function() {
-      $('#' + project + '-title').fadeIn('slow');
-    });
+    $('#' + project + '-title').removeClass('spin');
+    var reappear = function() {
+      $('#' + project + '-title').children('svg, a.more').fadeIn(600);
+    }
+    window.setTimeout(reappear, 1000);
+    $('#' + project + '-info').fadeOut(800);
   });
 
 });

@@ -14,7 +14,7 @@
 
 .about-left {
   float: left;
-  margin-left: 80px;
+  margin-left: 70px;
   margin-right: 100px;
   h3 {
     margin: 0;
@@ -62,12 +62,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
     background: white;
     img {
-      position: absolute;
-      width: 100%;
-      @include full-center;
+      position: absolute;;
+      height: 100%;
+      @include vertical-center;
     }
   }
 }

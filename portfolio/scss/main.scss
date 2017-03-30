@@ -1,5 +1,3 @@
-// @import "libraries/bourbon/bourbon.scss";
-// @import "libraries/neat/neat.scss";
 
 @import "partials/_reset.scss";
 
@@ -8,30 +6,33 @@
 
 @import "partials/_typography";
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   box-sizing: border-box;
   background-color: $white;
   color: $black;
+  font-weight: 300;
   &::-webkit-scrollbar {
     display: none;
   }
-  font-weight: 300;
 }
 
 a {
-  display: inline-block;
   text-decoration: none;
   color: $black;
-  transition: transform .5s ease-in, color .5s ease-in;
   cursor: pointer;
 }
 
 .expand {
+  transition: transform .5s ease-in;
   &:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    color: black;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
   }
   &:visited {
     text-decoration: none;
