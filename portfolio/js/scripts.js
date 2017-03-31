@@ -16,8 +16,6 @@
 
 $(document).ready(function(){
 
-  var viewHeight = parseInt($(window).height());
-
   var counter = 1;
   $('#contact').click(function(){
     var self = this;

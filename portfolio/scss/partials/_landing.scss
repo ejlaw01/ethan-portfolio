@@ -11,7 +11,6 @@
   width: 100%;
   @include background-image("../img/about-imagine.jpg");
   background-size: cover;
-  -webkit-transition: translateZ(0);
   -webkit-filter: grayscale(.5);
   filter:grayscale(.5);
   &::before {

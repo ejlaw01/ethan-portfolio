@@ -20,6 +20,7 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  -webkit-transform: translateZ(0);
   -webkit-filter: grayscale(.1);
   filter: grayscale(.1);
   &::before {
@@ -32,21 +33,21 @@
 .project-title {
   position: absolute;
   @include full-center;
-  top: 50%;
   height: 470px;
-  -webkit-transition: left .8s ease-in-out, height .8s ease-in-out, transform .8s ease-in-out;
-  transition: left .8s ease-in-out, height .8s ease-in-out, transform .8s ease-in-out;
+  width: 75vw;
+  -webkit-transition: left .8s ease-in-out, height .8s ease-in-out;
+  transition: left .8s ease-in-out, height .8s ease-in-out;
   img {
-    position: absolute;
-    @include horizontal-center;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 300px;
-    opacity: 1;
   }
   svg {
-    position: absolute;
-    @include horizontal-center;
-    top: 320px;
-    max-width: 75vw;
+    position: relative;
+    margin: 35px auto;
+    width: 100%;
   }
   a {
     position: absolute;
@@ -66,9 +67,6 @@
 .spin {
   height: 300px;
   left: 75%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 
@@ -172,8 +170,9 @@
 }
 
 #character-generator {
-    @include background-image("../img/tiamet.jpg");
+  @include background-image("../img/tiamet.jpg");
 }
+
 
 #cold-brew  {
     @include background-image("../img/mate-with-text.png");
