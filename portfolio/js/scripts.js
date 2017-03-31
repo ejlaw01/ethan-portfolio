@@ -56,6 +56,10 @@ $(document).ready(function(){
     $('#dev-detail').fadeOut('slow', function(){});
   });
 
+  $('#portland-or').click(function(){
+    $('.pdx-rider').addClass('ride');
+  });
+
 
   $('.more').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');

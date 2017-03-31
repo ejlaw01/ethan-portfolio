@@ -285,7 +285,6 @@ a {
   height: 100vh;
   width: 50%;
   background: white;
-  opacity: 1;
   display: none; }
   @media screen and (max-width: 600px) {
     .info-wrapper {
@@ -438,6 +437,16 @@ a {
       -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
       transform: translate(0, -50%); }
+
+.pdx-rider {
+  position: absolute;
+  bottom: 10vh;
+  right: -65px;
+  -webkit-transition: transform 2.5s linear;
+  transition: transform 2.5s linear; }
+
+.ride {
+  transform: translateX(-110vw); }
 
 @media screen and (max-width: 1500px) {
   .about {

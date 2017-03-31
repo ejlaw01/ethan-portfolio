@@ -72,6 +72,18 @@
   }
 }
 
+.pdx-rider {
+  position: absolute;
+  bottom: 10vh;
+  right: -65px;
+  -webkit-transition: transform 2.5s linear;
+  transition: transform 2.5s linear;
+}
+
+.ride {
+  transform: translateX(-110vw);
+}
+
 @media screen and (max-width: 1500px) {
   .about {
     width: 1000px;
