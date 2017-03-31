@@ -16,10 +16,8 @@ body {
   background-color: $white;
   color: $black;
   font-weight: 300;
+  overflow-x: hidden;
   &::-webkit-scrollbar {
-    display: none;
-  }
-  &::-moz-scrollbar {
     display: none;
   }
 }

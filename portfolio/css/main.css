@@ -76,10 +76,9 @@ body {
   box-sizing: border-box;
   background-color: #ffffff;
   color: #181719;
-  font-weight: 300; }
+  font-weight: 300;
+  overflow-x: hidden; }
   body::-webkit-scrollbar {
-    display: none; }
-  body::-moz-scrollbar {
     display: none; }
 
 a {
@@ -120,6 +119,7 @@ a {
   background: url("../img/about-imagine.jpg") center center no-repeat;
   background-size: cover;
   background-size: cover;
+  -webkit-transform: translateZ(0);
   -webkit-filter: grayscale(0.5);
   filter: grayscale(0.5); }
   .landing::before {
@@ -373,7 +373,8 @@ a {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-transform: translateZ(0); }
 
 .about {
   position: absolute;
