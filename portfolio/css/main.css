@@ -545,4 +545,62 @@ a {
 .font-xs {
   font-size: 26pt; }
 
+.app-designs {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transform: translateZ(0); }
+  .app-designs h1 {
+    font-weight: 400;
+    margin: 2px; }
+
+.apps-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #222222; }
+  .apps-left h1 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    color: white; }
+
+.apps-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff; }
+  .apps-right h1 {
+    position: absolute;
+    top: 50px;
+    left: 0; }
+
+.design-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 192px; }
+  .design-wrapper img.phone-frame {
+    height: 100%;
+    width: 100%; }
+  .design-wrapper .screens-wrapper {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    bottom: 50px; }
+    .design-wrapper .screens-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%; }
+
 /*# sourceMappingURL=main.css.map */
