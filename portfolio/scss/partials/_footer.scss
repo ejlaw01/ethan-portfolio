@@ -1,0 +1,46 @@
+.footer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #fcfbf9;
+  -webkit-transform: translateZ(0);
+}
+
+.footer-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #292929;
+  h1 {
+    position: absolute;
+    @include vertical-center;
+    top: 47.5%;
+    left: 15%;
+    color: white;
+    text-align: center;
+    font-size: 54pt;
+  }
+}
+
+.footer-center {
+  position: absolute;
+  @include full-center;
+  top: 50%;
+  img {
+    height: 200px;
+  }
+}
+
+.footer-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  img {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    height: 50px;
+  }
+}

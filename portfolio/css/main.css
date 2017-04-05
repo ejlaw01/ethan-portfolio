@@ -118,7 +118,7 @@ a {
   width: 100%;
   background: url("../img/about-imagine.jpg") center center no-repeat;
   background-size: cover;
-  background-size: cover;
+  background-attachment: fixed;
   -webkit-transform: translateZ(0);
   -webkit-filter: grayscale(0.5);
   filter: grayscale(0.5); }
@@ -255,7 +255,7 @@ a {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 425px;
+    top: 430px;
     border: 2px solid black;
     border-radius: 3px;
     font-size: 1.4em;
@@ -268,6 +268,10 @@ a {
 .spin {
   height: 300px;
   left: 75%; }
+  @media screen and (max-width: 650px) {
+    .spin {
+      height: 470px;
+      left: 50%; } }
 
 .light::before {
   opacity: .4; }
@@ -286,7 +290,7 @@ a {
   width: 50%;
   background: white;
   display: none; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     .info-wrapper {
       width: 100%; } }
   .info-wrapper a.close {
@@ -300,8 +304,9 @@ a {
     background-color: rgba(255, 255, 255, 0.6);
     color: #555555;
     font-weight: 400;
-    cursor: pointer; }
-    @media screen and (max-width: 600px) {
+    cursor: pointer;
+    z-index: 1; }
+    @media screen and (max-width: 650px) {
       .info-wrapper a.close {
         top: auto;
         right: 10px;
@@ -309,11 +314,12 @@ a {
 
 .odd {
   left: 50%; }
+  @media screen and (max-width: 650px) {
+    .odd {
+      left: 0; } }
   .odd a.close {
     right: auto;
     left: -65px; }
-  .odd .spin {
-    left: 25%; }
 
 .project-info {
   position: absolute;
@@ -359,14 +365,18 @@ a {
 #cold-brew {
   background: url("../img/mate-with-text.png") center center no-repeat;
   background-size: cover; }
-  #cold-brew .project-title a {
-    border: 2px solid #aaaaaa;
+  #cold-brew a.more {
+    border: 2px solid #666666;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.17); }
+    background-color: rgba(200, 200, 200, 0.8); }
 
 #dark-sky {
   background: url("../img/dark-sky-hero-background.png") center center no-repeat;
   background-size: cover; }
+  #dark-sky a.more {
+    border: 2px solid white;
+    color: white;
+    background-color: rgba(200, 200, 200, 0.6); }
 
 .about-wrapper {
   position: relative;
@@ -542,5 +552,52 @@ a {
 
 .font-xs {
   font-size: 26pt; }
+
+.footer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #fcfbf9;
+  -webkit-transform: translateZ(0); }
+
+.footer-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #292929; }
+  .footer-left h1 {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 47.5%;
+    left: 15%;
+    color: white;
+    text-align: center;
+    font-size: 54pt; }
+
+.footer-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%; }
+  .footer-center img {
+    height: 200px; }
+
+.footer-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%; }
+  .footer-right img {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    height: 50px; }
 
 /*# sourceMappingURL=main.css.map */

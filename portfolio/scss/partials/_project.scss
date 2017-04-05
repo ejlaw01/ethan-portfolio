@@ -52,7 +52,7 @@
   a {
     position: absolute;
     @include horizontal-center;
-    top: 425px;
+    top: 430px;
     border: 2px solid black;
     border-radius: 3px;
     font-size: 1.4em;
@@ -67,6 +67,10 @@
 .spin {
   height: 300px;
   left: 75%;
+  @media screen and (max-width: 650px) {
+    height: 470px;
+    left: 50%;
+  }
 }
 
 
@@ -93,7 +97,7 @@
   width: 50%;
   background: white;
   display: none;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 650px) {
     width: 100%;
   }
   a.close {
@@ -108,7 +112,8 @@
     color: #555555;
     font-weight: 400;
     cursor: pointer;
-    @media screen and (max-width: 600px) {
+    z-index: 1;
+    @media screen and (max-width: 650px) {
       top: auto;
       right: 10px;
       top: 0px;
@@ -118,13 +123,15 @@
 
 .odd {
   left: 50%;
+  @media screen and (max-width: 650px) {
+    left: 0;
+  }
   a.close {
     right: auto;
     left: -65px;
 
   }
   .spin {
-    left: 25%;
   }
 }
 
@@ -174,17 +181,20 @@
 
 
 #cold-brew  {
-    @include background-image("../img/mate-with-text.png");
-    // @include background-image("../img/just-mate-background-wide.png");
-  .project-title a {
-    border: 2px solid #aaaaaa;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, .17);
-  }
+  @include background-image("../img/mate-with-text.png");
+  // @include background-image("../img/just-mate-background-wide.png");
   a.more {
+    border: 2px solid #666666;
+    color: #ffffff;
+    background-color: rgba(200, 200, 200, .8);
   }
 }
 
 #dark-sky {
     @include background-image("../img/dark-sky-hero-background.png");
+    a.more {
+      border: 2px solid white;
+      color: white;
+      background-color: rgba(200,200,200, .6);
+    }
 }
