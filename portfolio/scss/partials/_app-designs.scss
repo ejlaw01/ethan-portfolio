@@ -40,24 +40,29 @@
 .design-wrapper {
   position: absolute;
   @include full-center;
-  height: 400px;
-  width: 192px;
+  top: 55%;
+  height: 500px;
+  width: 250px;
   img.phone-frame {
     height: 100%;
     width: 100%;
   }
   .screens-wrapper {
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 10px;
     right: 10px;
-    bottom: 50px;
+    bottom: 60px;
     img {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
+      display: none;
+      &:first-child {
+        display: block;
+      }
     }
   }
 }

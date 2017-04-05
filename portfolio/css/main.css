@@ -585,22 +585,26 @@ a {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 400px;
-  width: 192px; }
+  top: 55%;
+  height: 500px;
+  width: 250px; }
   .design-wrapper img.phone-frame {
     height: 100%;
     width: 100%; }
   .design-wrapper .screens-wrapper {
     position: absolute;
-    top: 40px;
+    top: 45px;
     left: 10px;
     right: 10px;
-    bottom: 50px; }
+    bottom: 60px; }
     .design-wrapper .screens-wrapper img {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      display: none; }
+      .design-wrapper .screens-wrapper img:first-child {
+        display: block; }
 
 /*# sourceMappingURL=main.css.map */
