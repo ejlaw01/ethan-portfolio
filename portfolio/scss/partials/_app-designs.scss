@@ -18,7 +18,7 @@
   background-color: #222222;
   h1 {
     position: absolute;
-    top: 50px;
+    top: 6%;
     right: 0;
     color: white;
   }
@@ -32,7 +32,7 @@
   background-color: #ffffff;
   h1 {
     position: absolute;
-    top: 50px;
+    top: 6%;
     left: 0;
   }
 }
@@ -64,5 +64,59 @@
         display: block;
       }
     }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .design-wrapper {
+    height: 400px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .app-designs .apps-right h1, .app-designs .apps-left h1 {
+    font-size: 24pt;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app-designs {
+    height: 200vh;
+  }
+  .apps-left {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    h1 {
+      display: none;
+    }
+  }
+  .apps-right {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    h1 {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+      margin: 25px auto;
+    }
+    h1 span.hide {
+      display: inline-block;
+    }
+  }
+  .design-wrapper {
+    top: 52%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .apps-right h1 {
+    font-size: 28pt;
   }
 }

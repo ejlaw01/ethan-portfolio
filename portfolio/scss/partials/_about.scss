@@ -160,6 +160,18 @@
   }
 }
 
+@media screen and (max-width: 350px) {
+  .about {
+    width: 100vw;
+  }
+  .about-left, .about-right {
+    left: 5px;
+    width: 100vw;
+  }
+  .down-arrow {
+    display: none;
+  }
+}
 
 
 #hey-im-ethan {
