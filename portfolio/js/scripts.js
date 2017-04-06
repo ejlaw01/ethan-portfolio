@@ -42,68 +42,68 @@ $(document).ready(function(){
     }, 500);
   });
 
-
-  $('#hey-im-ethan').click(function(){
-    $('#ethan-detail').fadeIn('slow', function(){    });
-  });
-  $('#hey-im-ethan').mouseout(function(){
-    $('#ethan-detail').fadeOut('slow', function(){});
-  });
-
-  $('#web-developer').click(function(){
-    $('#dev-detail').fadeIn('slow', function(){});
-  });
-  $('#web-developer').mouseout(function(){
-    $('#dev-detail').fadeOut('slow', function(){});
-  });
-
-  $('#portland-or').click(function(){
-    $('.pdx-rider').addClass('ride');
-  });
-
-
-
-  $('.more').click(function(){
-    var project = $(this).parents('.project-wrapper').attr('id');
-    $('#' + project + '-title').addClass('spin');
-    $('#' + project + '-title').children('svg, a.more').fadeOut(100);
-    $('#' + project + '-info').fadeIn(800);
-  });
-
-  $('.close').click(function(){
-    var project = $(this).parents('.project-wrapper').attr('id');
-    $('#' + project + '-title').removeClass('spin');
-    var reappear = function() {
-      $('#' + project + '-title').children('svg, a.more').fadeIn(600);
-    }
-    window.setTimeout(reappear, 1000);
-    $('#' + project + '-info').fadeOut(800);
-  });
-
-
-  //App Design Slider
-
-  var sliderIndex = 1;
-  $('.screens-wrapper').click(function(){
-    var thisApp = $(this).parents('.design-wrapper').attr('id');
-    var screensWrapper = $(this).attr('id');
-    var numberOfScreens = $("#" + screensWrapper + " > img").length;
-
-
-    if (sliderIndex >= numberOfScreens) {
-      sliderIndex = 1;
-    } else {
-      sliderIndex +=1;
-    }
-
-    $("#" + screensWrapper + ' img').each(function() {
-      if ($(this).attr('id') === thisApp + "-screen-" + sliderIndex) {
-        $(this).css('display', 'block');
-      } else {
-        $(this).css('display', 'none');
-      }
-    });
-  });
+  //
+  // $('#hey-im-ethan').click(function(){
+  //   $('#ethan-detail').fadeIn('slow', function(){    });
+  // });
+  // $('#hey-im-ethan').mouseout(function(){
+  //   $('#ethan-detail').fadeOut('slow', function(){});
+  // });
+  //
+  // $('#web-developer').click(function(){
+  //   $('#dev-detail').fadeIn('slow', function(){});
+  // });
+  // $('#web-developer').mouseout(function(){
+  //   $('#dev-detail').fadeOut('slow', function(){});
+  // });
+  //
+  // $('#portland-or').click(function(){
+  //   $('.pdx-rider').addClass('ride');
+  // });
+  //
+  //
+  //
+  // $('.more').click(function(){
+  //   var project = $(this).parents('.project-wrapper').attr('id');
+  //   $('#' + project + '-title').addClass('spin');
+  //   $('#' + project + '-title').children('svg, a.more').fadeOut(100);
+  //   $('#' + project + '-info').fadeIn(800);
+  // });
+  //
+  // $('.close').click(function(){
+  //   var project = $(this).parents('.project-wrapper').attr('id');
+  //   $('#' + project + '-title').removeClass('spin');
+  //   var reappear = function() {
+  //     $('#' + project + '-title').children('svg, a.more').fadeIn(600);
+  //   }
+  //   window.setTimeout(reappear, 1000);
+  //   $('#' + project + '-info').fadeOut(800);
+  // });
+  //
+  //
+  // //App Design Slider
+  //
+  // var sliderIndex = 1;
+  // $('.screens-wrapper').click(function(){
+  //   var thisApp = $(this).parents('.design-wrapper').attr('id');
+  //   var screensWrapper = $(this).attr('id');
+  //   var numberOfScreens = $("#" + screensWrapper + " > img").length;
+  //
+  //
+  //   if (sliderIndex >= numberOfScreens) {
+  //     sliderIndex = 1;
+  //   } else {
+  //     sliderIndex +=1;
+  //   }
+  //
+  //   $("#" + screensWrapper + ' img').each(function() {
+  //     if ($(this).attr('id') === thisApp + "-screen-" + sliderIndex) {
+  //       $(this).css('display', 'block');
+  //     } else {
+  //       $(this).css('display', 'none');
+  //     }
+  //   });
+  // });
 
 
 });
