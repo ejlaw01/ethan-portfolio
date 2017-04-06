@@ -69,8 +69,7 @@ a {
   font-size: 1em; }
 
 html {
-  height: 100%;
-  overflow-x: hidden; }
+  height: 100%; }
 
 body {
   height: 100%;
@@ -217,7 +216,7 @@ a {
       .work-header img {
         height: 40px; } }
     .work-header img:hover {
-      cursor: default; }
+      cursor: pointer; }
 
 .project-wrapper {
   position: relative;
@@ -389,7 +388,8 @@ a {
   height: 100vh;
   width: 100%;
   background-color: #ffffff;
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  overflow-x: hidden; }
 
 .about {
   position: absolute;
