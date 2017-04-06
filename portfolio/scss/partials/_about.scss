@@ -193,6 +193,10 @@
 #pdx {
   font-size: 32pt;
 }
+.about-detail img {
+  -webkit-filter: grayscale(.2);
+  filter: grayscale(.2);
+}
 .font-xl {
   font-size: 80pt;
 }

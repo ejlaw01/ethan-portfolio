@@ -70,6 +70,16 @@
   }
 }
 
+.screens-wrapper {
+  // -webkit-filter: grayscale(.8);
+  // filter: grayscale(.8);
+  transition: filter .3s;
+  &:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+}
+
 @media screen and (max-height: 650px) {
   .design-wrapper {
     height: 400px;

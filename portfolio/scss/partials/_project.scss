@@ -170,7 +170,7 @@
     font-size: 1.3em;
     font-weight: 400;
     &:hover {
-      text-decoration: underline;
+      border-bottom: 1px solid black;
     }
   }
   img {
@@ -192,7 +192,7 @@
   }
   a.more {
     color: #ffffff;
-    background-color: #cccccc;
+    background-color: #666666;
   }
   a.close {
     color: white;

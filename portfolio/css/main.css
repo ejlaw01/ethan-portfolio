@@ -83,8 +83,10 @@ body {
 
 a {
   text-decoration: none;
+  border-bottom: 1px solid transparent;
   color: #181719;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: border-bottom .4s; }
 
 .expand {
   transition: transform .5s ease-in; }
@@ -358,7 +360,7 @@ a {
     font-size: 1.3em;
     font-weight: 400; }
     .project-content a:hover {
-      text-decoration: underline; }
+      border-bottom: 1px solid black; }
   .project-content img {
     width: 90%;
     margin: 5%; }
@@ -379,7 +381,7 @@ a {
     background: #666666; }
   #cold-brew a.more {
     color: #ffffff;
-    background-color: #cccccc; }
+    background-color: #666666; }
   #cold-brew a.close {
     color: white;
     background: black; }
@@ -565,6 +567,10 @@ a {
 #pdx {
   font-size: 32pt; }
 
+.about-detail img {
+  -webkit-filter: grayscale(0.2);
+  filter: grayscale(0.2); }
+
 .font-xl {
   font-size: 80pt; }
 
@@ -644,6 +650,12 @@ a {
     .design-wrapper .screens-wrapper:hover {
       cursor: pointer; }
 
+.screens-wrapper {
+  transition: filter .3s; }
+  .screens-wrapper:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0); }
+
 @media screen and (max-height: 650px) {
   .design-wrapper {
     height: 400px;
@@ -685,6 +697,8 @@ a {
   height: 100vh;
   width: 100%;
   -webkit-transform: translateZ(0); }
+  .footer a:hover {
+    border-bottom: 1px solid black; }
 
 .footer-left {
   position: absolute;
@@ -692,6 +706,31 @@ a {
   height: 100%;
   width: 50%;
   background-color: #ffffff; }
+  .footer-left .contact-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-bottom: 50px;
+    width: 80%; }
+    .footer-left .contact-text h5 {
+      font-size: 24pt;
+      margin: 30px 0; }
+    .footer-left .contact-text h6 {
+      font-size: 16pt;
+      margin: 30px 0; }
+      .footer-left .contact-text h6.footer-link {
+        display: inline-block;
+        margin-top: 8px;
+        margin-right: 60px; }
+    .footer-left .contact-text p {
+      font-size: 14pt;
+      margin: 10px 0;
+      line-height: 1.5em; }
+      .footer-left .contact-text p:nth-child(4) {
+        margin-right: 65px; }
 
 .footer-center {
   position: absolute;
@@ -710,7 +749,7 @@ a {
   right: 0;
   height: 100%;
   width: 50%;
-  background-color: #c9826e; }
+  background-color: #c99a8d; }
   .footer-right h1 {
     position: absolute;
     top: 50%;
@@ -720,7 +759,9 @@ a {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 54pt; }
+    font-size: 54pt;
+    margin-left: 20px;
+    margin-top: -2px; }
   .footer-right img {
     position: absolute;
     bottom: 30px;
