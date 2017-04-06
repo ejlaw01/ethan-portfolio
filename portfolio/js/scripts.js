@@ -35,12 +35,14 @@ $(document).ready(function(){
   });
 
 
-  $(document).on('click', 'a.scroll', function(event){
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top+0
-    }, 500);
-  });
+  // $(document).on('click', 'a.scroll', function(event) {
+  //   // debugger;
+  //   event.preventDefault();
+  //   $('html, body').animate({
+  //     scrollTop: $( $.attr(this, 'href') ).offset().top
+  //   }, 500);
+  //   return;
+  // });
 
 
   $('#hey-im-ethan').click(function(){
@@ -56,7 +58,6 @@ $(document).ready(function(){
   $('#web-developer').mouseout(function(){
     $('#dev-detail').fadeOut('slow', function(){});
   });
-
   $('#portland-or').click(function(){
     $('.pdx-rider').addClass('ride');
   });
@@ -75,11 +76,10 @@ $(document).ready(function(){
     $('#' + project + '-title').removeClass('spin');
     var reappear = function() {
       $('#' + project + '-title').children('svg, a.more').fadeIn(600);
-    }
+    };
     window.setTimeout(reappear, 1000);
     $('#' + project + '-info').fadeOut(800);
   });
-
 
   //App Design Slider
 

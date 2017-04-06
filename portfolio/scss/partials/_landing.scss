@@ -11,16 +11,13 @@
   width: 100%;
   @include background-image("../img/about-imagine.jpg");
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   -webkit-transform: translateZ(0);
-  -webkit-filter: grayscale(.5);
-  filter:grayscale(.5);
+  -webkit-filter: grayscale(1);
+  filter:grayscale(1);
   &::before {
     @include filter-position;
-    background: linear-gradient(to bottom, #ffffff, #000000);
-    opacity: .65;
+    background: linear-gradient(to bottom, #dddddd, black);
+    opacity: .6;
   }
 }
 

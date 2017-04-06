@@ -99,9 +99,6 @@ a {
 .container {
   margin: 0 auto; }
 
-.static-elements {
-  display: none; }
-
 .bold {
   font-weight: 400; }
 
@@ -122,12 +119,9 @@ a {
   -moz-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   -webkit-transform: translateZ(0);
-  -webkit-filter: grayscale(0.5);
-  filter: grayscale(0.5); }
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
   .landing::before {
     content: '';
     position: absolute;
@@ -135,8 +129,8 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to bottom, #ffffff, #000000);
-    opacity: .65; }
+    background: linear-gradient(to bottom, #dddddd, black);
+    opacity: .6; }
 
 .nav {
   position: relative; }
@@ -225,8 +219,8 @@ a {
   height: 100vh;
   width: 100vw;
   -webkit-transform: translateZ(0);
-  -webkit-filter: grayscale(0.1);
-  filter: grayscale(0.1); }
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5); }
   .project-wrapper::before {
     content: '';
     position: absolute;
@@ -307,10 +301,9 @@ a {
     top: 10px;
     right: -65px;
     margin: 10px;
-    padding: 6px 10px;
-    border: 2px solid #ffffff;
+    padding: 5px 10px 7px 10px;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: white;
     color: #555555;
     font-weight: 400;
     cursor: pointer;
@@ -323,12 +316,16 @@ a {
 
 .odd {
   left: 50%; }
-  @media screen and (max-width: 650px) {
-    .odd {
-      left: 0; } }
   .odd a.close {
     right: auto;
     left: -65px; }
+  @media screen and (max-width: 650px) {
+    .odd {
+      left: 0; }
+      .odd a.close {
+        top: 15px;
+        left: auto;
+        right: 20px; } }
 
 .project-info {
   position: absolute;
@@ -382,9 +379,11 @@ a {
     color: #ffffff;
     background: #666666; }
   #cold-brew a.more {
-    border: 2px solid #666666;
     color: #ffffff;
-    background-color: rgba(200, 200, 200, 0.8); }
+    background-color: #cccccc; }
+  #cold-brew a.close {
+    color: white;
+    background: black; }
 
 #dark-sky {
   background: url("../img/dark-sky-hero-background.png") center center no-repeat;
@@ -581,53 +580,6 @@ a {
 .font-xs {
   font-size: 26pt; }
 
-.footer {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-color: #fcfbf9;
-  -webkit-transform: translateZ(0); }
-
-.footer-left {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  background-color: #292929; }
-  .footer-left h1 {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    top: 47.5%;
-    left: 15%;
-    color: white;
-    text-align: center;
-    font-size: 54pt; }
-
-.footer-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%; }
-  .footer-center img {
-    height: 200px; }
-
-.footer-right {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 50%; }
-  .footer-right img {
-    position: absolute;
-    bottom: 30px;
-    right: 40px;
-    height: 50px; }
-
 .app-designs {
   position: relative;
   height: 100vh;
@@ -728,5 +680,51 @@ a {
 @media screen and (max-width: 350px) {
   .apps-right h1 {
     font-size: 28pt; } }
+.footer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  -webkit-transform: translateZ(0); }
+
+.footer-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff; }
+
+.footer-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 1; }
+  .footer-center img {
+    height: 200px; }
+
+.footer-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #c9826e; }
+  .footer-right h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 54pt; }
+  .footer-right img {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    height: 50px; }
 
 /*# sourceMappingURL=main.css.map */

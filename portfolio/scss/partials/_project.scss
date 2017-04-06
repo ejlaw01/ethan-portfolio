@@ -24,8 +24,8 @@
   height: 100vh;
   width: 100vw;
   -webkit-transform: translateZ(0);
-  -webkit-filter: grayscale(.1);
-  filter: grayscale(.1);
+  -webkit-filter: grayscale(.5);
+  filter: grayscale(.5);
   &::before {
     @include filter-position;
     background: $white;
@@ -108,10 +108,9 @@
     top: 10px;
     right: -65px;
     margin: 10px;
-    padding: 6px 10px;
-    border: 2px solid #ffffff;
+    padding: 5px 10px 7px 10px;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: white;
     color: #555555;
     font-weight: 400;
     cursor: pointer;
@@ -126,15 +125,17 @@
 
 .odd {
   left: 50%;
-  @media screen and (max-width: 650px) {
-    left: 0;
-  }
   a.close {
     right: auto;
     left: -65px;
-
   }
-  .spin {
+  @media screen and (max-width: 650px) {
+    left: 0;
+    a.close {
+      top: 15px;
+      left: auto;
+      right: 20px;
+    }
   }
 }
 
@@ -190,9 +191,12 @@
     background: #666666;
   }
   a.more {
-    border: 2px solid #666666;
     color: #ffffff;
-    background-color: rgba(200, 200, 200, .8);
+    background-color: #cccccc;
+  }
+  a.close {
+    color: white;
+    background: black;
   }
 }
 
