@@ -69,8 +69,7 @@ a {
   font-size: 1em; }
 
 html {
-  height: 100%;
-  overflow-x: hidden; }
+  height: 100%; }
 
 body {
   height: 100%;
@@ -399,7 +398,8 @@ a {
   height: 100vh;
   width: 100%;
   background-color: #ffffff;
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  overflow-x: hidden; }
 
 .about {
   position: absolute;
