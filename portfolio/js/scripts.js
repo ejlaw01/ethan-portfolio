@@ -64,7 +64,6 @@ $(document).ready(function(){
   $('.more').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
     $('#' + project + '-title').addClass('spin');
-    // $('#' + project + ' ' + '.odd').css('display', 'none');
     $('#' + project + '-title').children('svg, a.more').fadeOut(100);
     $('#' + project + '-info').fadeIn(800);
   });

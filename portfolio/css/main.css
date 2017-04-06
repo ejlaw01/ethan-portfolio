@@ -249,21 +249,21 @@ a {
     position: relative;
     margin: 35px auto;
     width: 100%; }
-  .project-title a {
+  .project-title a.more {
     position: absolute;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 430px;
-    border: 2px solid black;
+    top: 425px;
     border-radius: 3px;
     font-size: 1.4em;
     font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.6); }
+    color: white;
+    background: black; }
 
 .spin {
   height: 300px;
@@ -365,6 +365,9 @@ a {
 #cold-brew {
   background: url("../img/mate-with-text.png") center center no-repeat;
   background-size: cover; }
+  #cold-brew .project-title a {
+    color: #ffffff;
+    background: #666666; }
   #cold-brew a.more {
     border: 2px solid #666666;
     color: #ffffff;
@@ -374,9 +377,8 @@ a {
   background: url("../img/dark-sky-hero-background.png") center center no-repeat;
   background-size: cover; }
   #dark-sky a.more {
-    border: 2px solid white;
-    color: white;
-    background-color: rgba(200, 200, 200, 0.6); }
+    color: black;
+    background: white; }
 
 .about-wrapper {
   position: relative;
