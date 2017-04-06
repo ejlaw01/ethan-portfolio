@@ -13,6 +13,9 @@
     @media screen and (max-width: 440px) {
       height: 40px;
     }
+    &:hover {
+      cursor: default;
+    }
   }
 }
 

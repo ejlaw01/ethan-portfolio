@@ -14,6 +14,7 @@
 //   }
 // }
 
+
 $(document).ready(function(){
 
   var counter = 1;
@@ -61,6 +62,7 @@ $(document).ready(function(){
   });
 
 
+
   $('.more').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
     $('#' + project + '-title').addClass('spin');
@@ -77,5 +79,31 @@ $(document).ready(function(){
     window.setTimeout(reappear, 1000);
     $('#' + project + '-info').fadeOut(800);
   });
+
+
+  //App Design Slider
+
+  var sliderIndex = 1;
+  $('.screens-wrapper').click(function(){
+    var thisApp = $(this).parents('.design-wrapper').attr('id');
+    var screensWrapper = $(this).attr('id');
+    var numberOfScreens = $("#" + screensWrapper + " > img").length;
+
+
+    if (sliderIndex >= numberOfScreens) {
+      sliderIndex = 1;
+    } else {
+      sliderIndex +=1;
+    }
+
+    $("#" + screensWrapper + ' img').each(function() {
+      if ($(this).attr('id') === thisApp + "-screen-" + sliderIndex) {
+        $(this).css('display', 'block');
+      } else {
+        $(this).css('display', 'none');
+      }
+    });
+  });
+
 
 });

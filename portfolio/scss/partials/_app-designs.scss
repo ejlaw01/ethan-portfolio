@@ -1,0 +1,122 @@
+.app-designs {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-transform: translateZ(0);
+  h1 {
+    font-weight: 400;
+    margin: 2px;
+  }
+}
+
+.apps-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #222222;
+  h1 {
+    position: absolute;
+    top: 6%;
+    right: 0;
+    color: white;
+  }
+}
+
+.apps-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff;
+  h1 {
+    position: absolute;
+    top: 6%;
+    left: 0;
+  }
+}
+
+.design-wrapper {
+  position: absolute;
+  @include full-center;
+  top: 55%;
+  height: 500px;
+  width: 250px;
+  img.phone-frame {
+    height: 100%;
+    width: 100%;
+  }
+  .screens-wrapper {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    right: 10px;
+    bottom: 60px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: none;
+      &:first-child {
+        display: block;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .design-wrapper {
+    height: 400px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .app-designs .apps-right h1, .app-designs .apps-left h1 {
+    font-size: 24pt;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app-designs {
+    height: 200vh;
+  }
+  .apps-left {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    h1 {
+      display: none;
+    }
+  }
+  .apps-right {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    h1 {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+      margin: 25px auto;
+    }
+    h1 span.hide {
+      display: inline-block;
+    }
+  }
+  .design-wrapper {
+    top: 52%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .apps-right h1 {
+    font-size: 28pt;
+  }
+}

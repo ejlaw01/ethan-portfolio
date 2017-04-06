@@ -11,6 +11,9 @@
   width: 100%;
   @include background-image("../img/about-imagine.jpg");
   background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   -webkit-transform: translateZ(0);
   -webkit-filter: grayscale(.5);
   filter:grayscale(.5);
@@ -69,6 +72,7 @@
 }
 
 .down-arrow {
+  display: none;
   position: absolute;
   @include horizontal-center;
   bottom: 40px;
