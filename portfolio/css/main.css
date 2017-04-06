@@ -723,7 +723,7 @@ a {
       margin: 30px 0; }
       .footer-left .contact-text h6.footer-link {
         display: inline-block;
-        margin-top: 8px;
+        margin-top: 5px;
         margin-right: 60px; }
     .footer-left .contact-text p {
       font-size: 14pt;
@@ -731,6 +731,11 @@ a {
       line-height: 1.5em; }
       .footer-left .contact-text p:nth-child(4) {
         margin-right: 65px; }
+  .footer-left img {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    height: 40px; }
 
 .footer-center {
   position: absolute;
@@ -762,10 +767,54 @@ a {
     font-size: 54pt;
     margin-left: 20px;
     margin-top: -2px; }
-  .footer-right img {
+
+@media screen {
+  .footer {
+    height: auto; }
+
+  .footer-left, .footer-right {
+    position: relative;
+    width: 100%; }
+
+  .footer-right {
+    height: 250px; }
+    .footer-right h1 {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      padding-top: 40px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      transform: translate(0, 0); }
+
+  .footer-left {
+    height: auto; }
+    .footer-left .contact-text {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      transform: translate(0, 0);
+      width: 85%;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 110px; }
+      .footer-left .contact-text p:nth-child(4) {
+        margin-right: auto; }
+
+  .footer-center {
     position: absolute;
-    bottom: 30px;
-    right: 40px;
-    height: 50px; }
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 150px; } }
 
 /*# sourceMappingURL=main.css.map */
