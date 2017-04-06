@@ -76,12 +76,12 @@
   position: absolute;
   bottom: 10vh;
   right: -65px;
-  -webkit-transition: transform 2.5s linear;
-  transition: transform 2.5s linear;
+  -webkit-transition: transform 3s linear;
+  transition: transform 3s linear;
 }
 
 .ride {
-  transform: translateX(-110vw);
+  transform: translateX(-150vw);
 }
 
 @media screen and (max-width: 1500px) {
@@ -184,6 +184,7 @@
 }
 #portland-or {
   line-height: 2.8em;
+  cursor: pointer;
 }
 #web {
   font-size: 58pt;

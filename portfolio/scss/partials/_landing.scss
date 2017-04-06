@@ -71,6 +71,7 @@
 }
 
 .down-arrow {
+  display: none;
   position: absolute;
   @include horizontal-center;
   bottom: 40px;

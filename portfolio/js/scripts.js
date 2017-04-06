@@ -84,7 +84,6 @@ $(document).ready(function(){
   //App Design Slider
 
   var sliderIndex = 1;
-
   $('.screens-wrapper').click(function(){
     var thisApp = $(this).parents('.design-wrapper').attr('id');
     var screensWrapper = $(this).attr('id');
@@ -104,24 +103,7 @@ $(document).ready(function(){
         $(this).css('display', 'none');
       }
     });
-
   });
-
-  // var slider1Index = 1;
-  // var slider2Index = 1;
-
-  // if (thisApp === 'quantum') {
-  //   slider1Index += 1;
-  // } else if (thisApp === 'forage') {
-  //   slider2Index +=1;
-  // }
-  //
-  // if (slider1Index > numberOfScreens) {
-  //   slider1Index = 1;
-  // }
-  // if (slider2Index > numberOfScreens) {
-  //   slider2Index = 1;
-  // }
 
 
 });
