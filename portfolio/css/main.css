@@ -83,7 +83,6 @@ body {
 
 a {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   color: #181719;
   cursor: pointer;
   transition: border-bottom .4s; }
@@ -358,7 +357,8 @@ a {
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
-    font-weight: 400; }
+    font-weight: 400;
+    border-bottom: 1px solid transparent; }
     .project-content a:hover {
       border-bottom: 1px solid black; }
   .project-content img {
@@ -697,6 +697,8 @@ a {
   height: 100vh;
   width: 100%;
   -webkit-transform: translateZ(0); }
+  .footer a {
+    border-bottom: 1px solid transparent; }
   .footer a:hover {
     border-bottom: 1px solid black; }
 
@@ -767,6 +769,18 @@ a {
     font-size: 54pt;
     margin-left: 20px;
     margin-top: -2px; }
+
+.credits {
+  margin-top: 60px; }
+  .credits h4 {
+    font-size: 11pt;
+    color: #c99a8d;
+    margin-top: 10px; }
+    .credits h4 a {
+      color: #a5857d; }
+      .credits h4 a:hover {
+        border-bottom: 1px solid transparent;
+        color: #564642; }
 
 @media screen {
   .footer {

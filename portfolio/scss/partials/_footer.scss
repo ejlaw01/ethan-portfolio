@@ -3,6 +3,9 @@
   height: 100vh;
   width: 100%;
   -webkit-transform: translateZ(0);
+  a {
+    border-bottom: 1px solid transparent;
+  }
   a:hover {
     border-bottom: 1px solid black;
   }
@@ -73,6 +76,22 @@
     font-size: 54pt;
     margin-left: 20px;
     margin-top: -2px;
+  }
+}
+
+.credits {
+  margin-top: 60px;
+  h4 {
+    font-size: 11pt;
+    color: #c99a8d;
+    margin-top: 10px;
+    a {
+      color: #a5857d;
+      &:hover {
+        border-bottom: 1px solid transparent;
+        color: #564642;
+      }
+    }
   }
 }
 
