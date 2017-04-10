@@ -14,7 +14,7 @@
       height: 40px;
     }
     &:hover {
-      cursor: default;
+      cursor: pointer;
     }
   }
 }
@@ -45,7 +45,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 300px;
+    height: 250px;
   }
   svg {
     position: relative;
@@ -55,8 +55,8 @@
   a.more {
     position: absolute;
     @include horizontal-center;
-    top: 425px;
-    border-radius: 3px;
+    top: 385px;
+    border-radius: 1px;
     font-size: 1.4em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -84,10 +84,9 @@
 }
 
 .dark {
-  a {
-    color: white;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, .4);
+  &::before {
+    background: #777777;
+    opacity: .3;
   }
 }
 
@@ -182,19 +181,12 @@
 
 #character-generator {
   @include background-image("../img/tiamet.jpg");
+
 }
 
 
 #cold-brew  {
   @include background-image("../img/mate-with-text.png");
-  .project-title a {
-    color: #ffffff;
-    background: #666666;
-  }
-  a.more {
-    color: #ffffff;
-    background-color: #666666;
-  }
   a.close {
     color: white;
     background: black;
@@ -202,9 +194,5 @@
 }
 
 #dark-sky {
-    @include background-image("../img/dark-sky-hero-background.png");
-    a.more {
-      color: black;
-      background: white;
-    }
+  @include background-image("../img/dark-sky-hero-background.png");
 }

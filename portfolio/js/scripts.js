@@ -1,18 +1,18 @@
 
-// var developer = function() {
-//   for (var day = 0; day < 7; day++) {
-//     if (day < 5) {
-//       alarm(snooze());
-//       drinkMate(yerba.bitter, water.hot);
-//       code(Javascript(JQuery || Angular2), HTML5, CSS3);
-//       git(commit(""));
-//     } else {
-//       dAndD(roll(20));
-//       goHiking(nature);
-//       dance(beats);
-//     }
-//   }
-// }
+var developer = function() {
+  for (var day = 0; day < 7; day++) {
+    if (day < 5) {
+      alarm(snooze());
+      drinkMate(yerba.bitter, water.hot);
+      code(Javascript(JQuery || Angular2), HTML5, CSS3);
+      git(commit("fix all the bugs"));
+    } else {
+      dAndD(roll(20));
+      goHiking(nature);
+      dance(beats);
+    }
+  }
+}
 
 
 $(document).ready(function(){

@@ -212,7 +212,7 @@ a {
       .work-header img {
         height: 40px; } }
     .work-header img:hover {
-      cursor: default; }
+      cursor: pointer; }
 
 .project-wrapper {
   position: relative;
@@ -247,7 +247,7 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 300px; }
+    height: 250px; }
   .project-title svg {
     position: relative;
     margin: 35px auto;
@@ -258,8 +258,8 @@ a {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 425px;
-    border-radius: 3px;
+    top: 385px;
+    border-radius: 1px;
     font-size: 1.4em;
     font-weight: 400;
     letter-spacing: 1px;
@@ -279,10 +279,9 @@ a {
 .light::before {
   opacity: .4; }
 
-.dark a {
-  color: white;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.4); }
+.dark::before {
+  background: #777777;
+  opacity: .3; }
 
 .info-wrapper {
   position: absolute;
@@ -376,12 +375,6 @@ a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
-  #cold-brew .project-title a {
-    color: #ffffff;
-    background: #666666; }
-  #cold-brew a.more {
-    color: #ffffff;
-    background-color: #666666; }
   #cold-brew a.close {
     color: white;
     background: black; }
@@ -391,9 +384,6 @@ a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
-  #dark-sky a.more {
-    color: black;
-    background: white; }
 
 .about-wrapper {
   position: relative;
