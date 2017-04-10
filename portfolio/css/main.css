@@ -294,6 +294,7 @@ a {
   display: none; }
   @media screen and (max-width: 650px) {
     .info-wrapper {
+      overflow: scroll;
       width: 100%; } }
   .info-wrapper a.close {
     position: absolute;
@@ -335,6 +336,16 @@ a {
   transform: translate(-50%, -50%);
   width: 90%;
   color: black; }
+  @media screen and (max-width: 650px) {
+    .project-info {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      transform: translate(0, 0); } }
 
 .project-content {
   max-width: 550px; }
@@ -765,7 +776,8 @@ a {
   .credits h4 {
     font-size: 11pt;
     color: #c99a8d;
-    margin-top: 10px; }
+    margin-top: 10px;
+    line-height: 1.5; }
     .credits h4 a {
       color: #a5857d; }
       .credits h4 a:hover {
