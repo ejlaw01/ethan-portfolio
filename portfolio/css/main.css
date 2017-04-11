@@ -205,6 +205,9 @@ a {
 
   .title h3 {
     font-size: 1.1em; } }
+@media screen and (max-width: 700px) {
+  .landing {
+    background-position: right; } }
 .work-header {
   position: relative;
   height: 150px;
@@ -257,9 +260,10 @@ a {
     margin-left: auto;
     margin-right: auto;
     height: 250px; }
-  .project-title svg {
+  .project-title img.project-name {
     position: relative;
     margin: 35px auto;
+    height: auto;
     width: 100%; }
   .project-title a.more {
     position: absolute;
@@ -304,7 +308,9 @@ a {
   @media screen and (max-width: 650px) {
     .info-wrapper {
       width: 100%;
-      overflow: scroll; } }
+      overflow: scroll; }
+      .info-wrapper::-webkit-scrollbar {
+        display: none; } }
   .info-wrapper a.close {
     position: absolute;
     top: 10px;
@@ -388,7 +394,7 @@ a {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-size: 50vh; }
+  background-size: 60vh; }
   #cold-brew a.close {
     color: white;
     background: black; }

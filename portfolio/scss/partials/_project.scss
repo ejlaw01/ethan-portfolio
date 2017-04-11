@@ -47,9 +47,10 @@
     margin-right: auto;
     height: 250px;
   }
-  svg {
+  img.project-name {
     position: relative;
     margin: 35px auto;
+    height: auto;
     width: 100%;
   }
   a.more {
@@ -101,6 +102,9 @@
   @media screen and (max-width: 650px) {
     width: 100%;
     overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   a.close {
     position: absolute;
@@ -196,7 +200,7 @@
 
 #cold-brew  {
   @include background-image("../img/yerba-screen-small.png");
-  background-size: 50vh;
+  background-size: 60vh;
   a.close {
     color: white;
     background: black;
