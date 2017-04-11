@@ -196,6 +196,15 @@ a {
     transform: translateX(-50%);
     height: 50px; }
 
+@media screen and (max-width: 800px) {
+  .landing {
+    background-attachment: scroll; } }
+@media screen and (max-width: 400px) {
+  .title h1 {
+    font-size: 2em; }
+
+  .title h3 {
+    font-size: 1.1em; } }
 .work-header {
   position: relative;
   height: 150px;
@@ -294,8 +303,8 @@ a {
   display: none; }
   @media screen and (max-width: 650px) {
     .info-wrapper {
-      overflow: scroll;
-      width: 100%; } }
+      width: 100%;
+      overflow: scroll; } }
   .info-wrapper a.close {
     position: absolute;
     top: 10px;
@@ -336,56 +345,50 @@ a {
   transform: translate(-50%, -50%);
   width: 90%;
   color: black; }
-  @media screen and (max-width: 650px) {
-    .project-info {
-      position: relative;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      -webkit-transform: translate(0, 0);
-      -moz-transform: translate(0, 0);
-      transform: translate(0, 0); } }
 
-.project-content {
-  max-width: 550px; }
-  .project-content h2 {
-    padding: 0;
-    margin: 40px 10%;
-    margin-top: 0px;
-    font-size: 2em;
-    width: 80%; }
+.project-content h2 {
+  padding: 0;
+  margin: 40px 10%;
+  margin-top: 0px;
+  font-size: 2em;
+  width: 80%; }
+.project-content p {
+  width: 80%;
+  margin: 20px 10%;
+  font-size: 1.3em;
+  margin-bottom: 35px; }
+.project-content a {
+  display: inline-block;
+  margin-left: 10%;
+  margin-bottom: 35px;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  border-bottom: 1px solid transparent; }
+  .project-content a:hover {
+    border-bottom: 1px solid black; }
+.project-content img {
+  width: 90%;
+  margin: 5%; }
+@media screen and (max-width: 800px) {
   .project-content p {
-    width: 80%;
-    margin: 20px 10%;
-    font-size: 1.3em;
-    margin-bottom: 35px; }
-  .project-content a {
-    display: inline-block;
-    margin-left: 10%;
-    margin-bottom: 35px;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3em;
-    font-weight: 400;
-    border-bottom: 1px solid transparent; }
-    .project-content a:hover {
-      border-bottom: 1px solid black; }
-  .project-content img {
-    width: 90%;
-    margin: 5%; }
+    font-size: 1em; } }
 
 #character-generator {
   background: url("../img/tiamet.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  -webkit-transition: background-position .8s ease-in-out;
+  transition: background-position .8s ease-in-out; }
 
 #cold-brew {
-  background: url("../img/mate-with-text.png") center center no-repeat;
+  background: url("../img/yerba-screen-small.png") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  background-size: 50vh; }
   #cold-brew a.close {
     color: white;
     background: black; }
@@ -417,7 +420,8 @@ a {
 .about-left {
   float: left;
   margin-left: 70px;
-  margin-right: 100px; }
+  margin-right: 100px;
+  white-space: nowrap; }
   .about-left h3 {
     margin: 0;
     text-align: justify; }
@@ -539,14 +543,38 @@ a {
     .about-right h4 {
       font-size: 20pt; }
     .about-right h5 {
-      display: none; } }
+      display: none; }
+    .about-right .about-detail img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); } }
 @media screen and (max-width: 350px) {
+  .about-wrapper {
+    height: auto; }
+
   .about {
+    position: relative;
+    top: 0;
     width: 100vw; }
 
-  .about-left, .about-right {
-    left: 5px;
-    width: 100vw; }
+  .about-left {
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+
+  .about-right {
+    margin: 0 auto;
+    width: 240px;
+    top: -40px;
+    left: 15px; }
+    .about-right h4 {
+      font-size: 14pt; }
 
   .down-arrow {
     display: none; } }

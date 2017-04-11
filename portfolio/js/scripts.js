@@ -1,18 +1,18 @@
 
-var developer = function() {
-  for (var day = 0; day < 7; day++) {
-    if (day < 5) {
-      alarm(snooze());
-      drinkMate(yerba.bitter, water.hot);
-      code(Javascript(JQuery || Angular2), HTML5, CSS3);
-      git(commit("fix all the bugs"));
-    } else {
-      dAndD(roll(20));
-      goHiking(nature);
-      dance(beats);
-    }
-  }
-}
+// var developer = function() {
+//   for (var day = 0; day < 7; day++) {
+//     if (day < 5) {
+//       alarm(snooze());
+//       drinkMate(yerba.bitter, water.hot);
+//       code(Javascript(JQuery || Angular2), HTML5, CSS3);
+//       git(commit("fix all the bugs"));
+//     } else {
+//       dAndD(roll(20));
+//       goHiking(nature);
+//       dance(beats);
+//     }
+//   }
+// }
 
 
 $(document).ready(function(){
@@ -50,6 +50,9 @@ $(document).ready(function(){
     $('#' + project + '-title').addClass('spin');
     $('#' + project + '-title').children('svg, a.more').fadeOut(100);
     $('#' + project + '-info').fadeIn(800);
+    if (project === "cold-brew") {
+      $('#cold-brew').animate({backgroundPositionX: "12%"}, 600);
+    }
   });
 
   $('.close').click(function(){
@@ -60,6 +63,9 @@ $(document).ready(function(){
     };
     window.setTimeout(reappear, 1000);
     $('#' + project + '-info').fadeOut(800);
+    if (project === "cold-brew") {
+      $('#cold-brew').animate({backgroundPositionX: "50%"}, 600);
+    }
   });
 
   //App Design Slider

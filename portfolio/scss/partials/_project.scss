@@ -76,7 +76,6 @@
   }
 }
 
-
 .light {
   &::before {
     opacity: .4;
@@ -100,8 +99,8 @@
   background: white;
   display: none;
   @media screen and (max-width: 650px) {
-    overflow: scroll;
     width: 100%;
+    overflow: scroll;
   }
   a.close {
     position: absolute;
@@ -145,13 +144,12 @@
   width: 90%;
   color: black;
   @media screen and (max-width: 650px) {
-    position: relative;
-    @include reset-position;
+    // position: relative;
+    // @include reset-position;
   }
 }
 
 .project-content {
-  max-width: 550px;
   h2 {
     padding: 0;
     margin: 40px 10%;
@@ -182,16 +180,23 @@
     width: 90%;
     margin: 5%;
   }
+  @media screen and (max-width: 800px) {
+    p {
+      font-size: 1em;
+    }
+  }
 }
 
 #character-generator {
   @include background-image("../img/tiamet.jpg");
-
+  -webkit-transition: background-position .8s ease-in-out;
+  transition: background-position .8s ease-in-out;
 }
 
 
 #cold-brew  {
-  @include background-image("../img/mate-with-text.png");
+  @include background-image("../img/yerba-screen-small.png");
+  background-size: 50vh;
   a.close {
     color: white;
     background: black;

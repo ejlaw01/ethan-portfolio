@@ -18,6 +18,7 @@
   float: left;
   margin-left: 70px;
   margin-right: 100px;
+  white-space: nowrap;
   h3 {
     margin: 0;
     text-align: justify;
@@ -158,16 +159,38 @@
     h5 {
       display: none;
     }
+    .about-detail img {
+      position: absolute;
+      @include full-center;
+    }
   }
 }
 
 @media screen and (max-width: 350px) {
+  .about-wrapper {
+    height: auto;
+  }
   .about {
+    position: relative;
+    top: 0;
     width: 100vw;
   }
-  .about-left, .about-right {
-    left: 5px;
-    width: 100vw;
+  .about-left {
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7);
+  }
+  .about-right {
+    margin: 0 auto;
+    width: 240px;
+    top: -40px;
+    left: 15px;
+    h4 {
+      font-size: 14pt;
+    }
   }
   .down-arrow {
     display: none;

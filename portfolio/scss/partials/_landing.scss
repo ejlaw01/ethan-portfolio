@@ -90,3 +90,17 @@
     height: 50px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .landing {
+    background-attachment: scroll;
+  }
+}
+@media screen and (max-width: 400px) {
+  .title h1 {
+    font-size: 2em;
+  }
+  .title h3 {
+    font-size: 1.1em;
+  }
+}
