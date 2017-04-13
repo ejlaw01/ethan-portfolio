@@ -14,17 +14,68 @@
 //   }
 // }
 
+// function inPagePathing(){
+//   var scrollPosition = $( $.attr(this, 'href') ).offset().top;
+//   var pageSection = $(this).attr('href');
+//   var url = pageSection.substr(1).slice(0, -8);
+//   console.log(scrollPosition + " " + url);
+//   location.hash = "#" + url + "-section";
+//   history.replaceState("", "", url);
+// }
 
 $(document).ready(function(){
+
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 30;
+  var navbarHeight = $('#menu-burger').outerHeight();
+
+  $(window).scroll(function(event){
+      didScroll = true;
+  });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('#menu-burger').removeClass('nav-up').addClass('nav-down');
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('#menu-burger').removeClass('nav-down').addClass('nav-up');
+          }
+      }
+
+      lastScrollTop = st;
+  }
 
   $(document).on('click', 'a.scroll', function(event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+    }, 800);
+    var scrollPosition = $( $.attr(this, 'href') ).offset().top;
+    var pageSection = $(this).attr('href');
+    var url = pageSection.substr(1).slice(0, -8);
+    console.log(scrollPosition + " " + url);
+    location.hash = "#" + url + "-section";
+    history.replaceState("", "", url);
     return;
   });
-
 
   $('#hey-im-ethan').click(function(){
     $('#ethan-detail').fadeIn('slow', function(){    });
@@ -48,7 +99,7 @@ $(document).ready(function(){
   $('.more').click(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
     $('#' + project + '-title').addClass('spin');
-    $('#' + project + '-title').children('svg, a.more').fadeOut(100);
+    $('#' + project + '-title').children('img.project-name, a.more').fadeOut(100);
     $('#' + project + '-info').fadeIn(800);
     if (project === "cold-brew") {
       $('#cold-brew').animate({backgroundPositionX: "12%"}, 600);
@@ -59,7 +110,7 @@ $(document).ready(function(){
     var project = $(this).parents('.project-wrapper').attr('id');
     $('#' + project + '-title').removeClass('spin');
     var reappear = function() {
-      $('#' + project + '-title').children('svg, a.more').fadeIn(600);
+      $('#' + project + '-title').children('img.project-name, a.more').fadeIn(600);
     };
     window.setTimeout(reappear, 1000);
     $('#' + project + '-info').fadeOut(800);

@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="height=device-height, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -12,23 +13,20 @@
   </head>
   <body>
     <div class="container" id="page">
-      <div class="landing">
-        <div class="nav">
+      <img class="menu menu-hidden" id="menu-burger" src="img/menu-burger.png" alt="menu">
+      <div class="landing section" id="landing-section">
+        <!-- <div class="nav">
           <ul>
             <li id="about"><a class="scroll" href="#about-section">About</a></li>
             <li id="work"><a class="scroll" href="#work-section">Work</a></li>
-            <li id="contact"><a class="scroll" href="#footer">Contact</a></li>
+            <li id="contact"><a class="scroll" href="#contact-section">Contact</a></li>
           </ul>
-        </div>
+        </div> -->
         <div class="title">
           <h1>Ethan Law</h1>
           <div class="title-detail">
-            <h3>front-end dev // web designer</h3>
+            <h3>front-end developer // web designer</h3>
             <h3>Portland, OR</h3>
-          </div>
-          <div class="contact">
-            <h3><a href="mailto:ejlaw01@gmail.com">ejlaw01@gmail.com</a></h3>
-            <h3>&nbsp;</h3>
           </div>
         </div>
         <div class="social">
@@ -39,8 +37,19 @@
             <img src="img/linkedin-icon-light.png" alt="linkedin profile">
           </a>
         </div>
+        <div class="down-arrow">
+          <a  class="scroll" href="#about-section">
+            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                    </g>
+                </g>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="about-wrapper" id="about-section">
+      <div class="about-wrapper section" id="about-section">
         <div class="about">
           <div class="about-left">
             <div>
@@ -67,7 +76,7 @@
                 I am <span class="bold">currently available</span> for freelance work.
               </h4>
               <h4>
-                <a class="bold scroll" href="#footer">
+                <a class="bold scroll" href="#contact-section">
                   Contact
                 </a>
                 me and we can work together.
@@ -85,16 +94,27 @@
         <div class="pdx-rider">
           <img src="img/pdx-rider.png" alt="naked bike rider">
         </div>
+        <div class="down-arrow">
+          <a  class="scroll" href="#work-section">
+            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                    </g>
+                </g>
+            </svg>
+          </a>
+        </div>
       </div>
       <div class="work-header">
         <a href="#work-section" class="scroll">
           <img src="img/work-below.png" alt="work below">
         </a>
       </div>
-      <div id="work-section">
+      <div class="section" id="work-section">
         <div class="project-wrapper" id="dark-sky">
           <div class="project-title" id="dark-sky-title">
-            <img src="img/dark-sky-logo-light.png" alt="telescope">
+            <img class="project-logo" src="img/dark-sky-logo-light.png" alt="telescope">
             <img class="project-name" src="img/dark-sky-title.png" alt="Dark Sky Finder">
             <a class="more" id="dark-sky-more">MORE</a>
           </div>
@@ -117,6 +137,17 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="down-arrow">
+            <a  class="scroll" href="#cold-brew">
+              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                      </g>
+                  </g>
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -143,10 +174,22 @@
               </div>
             </div>
           </div>
+          <div class="down-arrow">
+            <a  class="scroll" href="#character-generator">
+              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                      </g>
+                  </g>
+              </svg>
+            </a>
+          </div>
         </div>
         <div class="project-wrapper light" id="character-generator">
           <div class="project-title" id="character-generator-title">
-            <img src="img/5e-cg-logo.png" alt="d20">
+            <img class="project-logo" src="img/5e-cg-logo.png" alt="d20">
+
             <img class="project-name" src="img/5e-cg-title.png" alt="5E Character Generator">
             <a class="more" id="character-generator-more">MORE</a>
           </div>
@@ -171,11 +214,23 @@
               </div>
             </div>
           </div>
+          <div class="down-arrow">
+            <a  class="scroll" href="#apps-section">
+              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                      </g>
+                  </g>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="app-designs">
+      <div class="app-designs" id="apps-section">
         <div class="apps-right">
-          <h1><span class="hide">App U </span>I Designs</h1>
+          <h1><span class="hide">App UI</span>&nbsp;Designs</h1>
+          <h3><span class="hide">*click</span> 'em</h3>
           <div class="design-wrapper" id="forage">
             <img class="phone-frame" src="img/phone-frame-white.png" alt="white phone frame">
             <div class="screens-wrapper" id="forage-screens">
@@ -188,7 +243,8 @@
           </div>
         </div>
         <div class="apps-left">
-          <h1>App U</h1>
+          <h1>App UI&nbsp;</h1>
+          <h3>*click</h3>
           <div class="design-wrapper" id="quantum">
             <img class="phone-frame" src="img/phone-frame-black.png" alt="black phone frame">
             <div class="screens-wrapper" id="quantum-screens">
@@ -200,8 +256,19 @@
             </div>
           </div>
         </div>
+        <div class="down-arrow">
+          <a  class="scroll" href="#contact-section">
+            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
+                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
+                    </g>
+                </g>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="footer" id="footer">
+      <div class="footer section" id="contact-section">
         <div class="footer-right">
           <h1>Contact</h1>
         </div>

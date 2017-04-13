@@ -8,6 +8,9 @@
     font-weight: 400;
     margin: 2px;
   }
+  h3 {
+
+  }
 }
 
 .apps-left {
@@ -18,8 +21,16 @@
   background-color: #222222;
   h1 {
     position: absolute;
-    top: 6%;
+    top: 20px;
     right: 0;
+    margin: 10px 0;
+    color: white;
+  }
+  h3 {
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    margin: 10px 0;
     color: white;
   }
 }
@@ -32,8 +43,15 @@
   background-color: #ffffff;
   h1 {
     position: absolute;
-    top: 6%;
+    top: 20px;
     left: 0;
+    margin: 10px 0;
+  }
+  h3 {
+    position: absolute;
+    top: 90px;
+    left: 3px;
+    margin: 10px 0;
   }
 }
 
@@ -80,20 +98,7 @@
   }
 }
 
-@media screen and (max-height: 650px) {
-  .design-wrapper {
-    height: 400px;
-    width: 200px;
-  }
-}
-
-@media screen and (max-height: 500px) {
-  .app-designs .apps-right h1, .app-designs .apps-left h1 {
-    font-size: 24pt;
-  }
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .app-designs {
     height: 200vh;
   }
@@ -103,6 +108,12 @@
     width: 100%;
     h1 {
       display: none;
+    }
+    h3 {
+      display: none;
+    }
+    .design-wrapper {
+      top: 50%;
     }
   }
   .apps-right {
@@ -119,14 +130,49 @@
     h1 span.hide {
       display: inline-block;
     }
-  }
-  .design-wrapper {
-    top: 52%;
+    h3 {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+      margin: 25px auto;
+    }
+    h3 span.hide {
+      display: inline-block;
+    }
+    .design-wrapper {
+      top: 55%;
+    }
   }
 }
 
 @media screen and (max-width: 350px) {
   .apps-right h1 {
     font-size: 28pt;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .design-wrapper {
+    height: 400px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .app-designs .apps-right h1, .app-designs .apps-left h1 {
+    font-size: 24pt;
+    margin: 20px auto;
+  }
+  .app-designs .apps-right h3,  .app-designs .apps-left h3 {
+    font-size: 12pt;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .design-wrapper {
+    height: 300px;
+    width: 150px;
   }
 }

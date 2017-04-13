@@ -40,7 +40,7 @@
   width: 75vw;
   -webkit-transition: left .8s ease-in-out, height .8s ease-in-out;
   transition: left .8s ease-in-out, height .8s ease-in-out;
-  img {
+  img.project-logo {
     position: relative;
     display: block;
     margin-left: auto;
@@ -49,9 +49,11 @@
   }
   img.project-name {
     position: relative;
+    display: block;
     margin: 35px auto;
     height: auto;
     width: 100%;
+    max-width: 450px;
   }
   a.more {
     position: absolute;
@@ -65,6 +67,18 @@
     padding: 10px 20px;
     color: white;
     background: black;
+  }
+  @media screen and (max-height: 500px) {
+    height: 300px;
+    img.project-logo {
+      height: 150px;
+    }
+    img.project-name {
+      margin: 25px auto;
+    }
+    a.more {
+      top: 265px;
+    }
   }
 }
 
@@ -193,10 +207,10 @@
 
 #character-generator {
   @include background-image("../img/tiamet.jpg");
-  -webkit-transition: background-position .8s ease-in-out;
-  transition: background-position .8s ease-in-out;
+  .project-title img.project-name {
+    top: 10px;
+  }
 }
-
 
 #cold-brew  {
   @include background-image("../img/yerba-screen-small.png");

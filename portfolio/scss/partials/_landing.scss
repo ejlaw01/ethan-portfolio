@@ -13,12 +13,28 @@
   background-attachment: fixed;
   -webkit-transform: translateZ(0);
   -webkit-filter: grayscale(1);
-  filter:grayscale(1);
+  filter: grayscale(1);
   &::before {
     @include filter-position;
     background: linear-gradient(to bottom, #dddddd, black);
     opacity: .6;
   }
+}
+
+.menu {
+  position: fixed;
+  left: 20px;
+  opacity: 1;
+  z-index: 1;
+  transition: top .5s ease-in-out;
+}
+
+.nav-up {
+  top: 20px;
+}
+
+.nav-down {
+  top: -100px;
 }
 
 .nav {
@@ -69,7 +85,6 @@
 }
 
 .down-arrow {
-  display: none;
   position: absolute;
   @include horizontal-center;
   bottom: 40px;
@@ -80,14 +95,19 @@
     height: 100%;
     width: 100%;
   }
-  img {
+  svg {
     display: block;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    height: 50px;
+    height: 30px;
+    opacity: .5;
+    transition: opacity .5s;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

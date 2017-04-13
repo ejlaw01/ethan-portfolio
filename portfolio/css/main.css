@@ -132,6 +132,19 @@ a {
     background: linear-gradient(to bottom, #dddddd, black);
     opacity: .6; }
 
+.menu {
+  position: fixed;
+  left: 20px;
+  opacity: 1;
+  z-index: 1;
+  transition: top .5s ease-in-out; }
+
+.nav-up {
+  top: 20px; }
+
+.nav-down {
+  top: -100px; }
+
 .nav {
   position: relative; }
   .nav ul {
@@ -174,7 +187,6 @@ a {
     margin: 10px; }
 
 .down-arrow {
-  display: none;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -187,14 +199,18 @@ a {
     display: block;
     height: 100%;
     width: 100%; }
-  .down-arrow img {
+  .down-arrow svg {
     display: block;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
-    height: 50px; }
+    height: 30px;
+    opacity: .5;
+    transition: opacity .5s; }
+    .down-arrow svg:hover {
+      opacity: 1; }
 
 @media screen and (max-width: 800px) {
   .landing {
@@ -254,7 +270,7 @@ a {
   width: 75vw;
   -webkit-transition: left .8s ease-in-out, height .8s ease-in-out;
   transition: left .8s ease-in-out, height .8s ease-in-out; }
-  .project-title img {
+  .project-title img.project-logo {
     position: relative;
     display: block;
     margin-left: auto;
@@ -262,9 +278,11 @@ a {
     height: 250px; }
   .project-title img.project-name {
     position: relative;
+    display: block;
     margin: 35px auto;
     height: auto;
-    width: 100%; }
+    width: 100%;
+    max-width: 450px; }
   .project-title a.more {
     position: absolute;
     left: 50%;
@@ -280,6 +298,15 @@ a {
     padding: 10px 20px;
     color: white;
     background: black; }
+  @media screen and (max-height: 500px) {
+    .project-title {
+      height: 300px; }
+      .project-title img.project-logo {
+        height: 150px; }
+      .project-title img.project-name {
+        margin: 25px auto; }
+      .project-title a.more {
+        top: 265px; } }
 
 .spin {
   height: 300px;
@@ -385,9 +412,9 @@ a {
   background: url("../img/tiamet.jpg") center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-  -webkit-transition: background-position .8s ease-in-out;
-  transition: background-position .8s ease-in-out; }
+  background-size: cover; }
+  #character-generator .project-title img.project-name {
+    top: 10px; }
 
 #cold-brew {
   background: url("../img/yerba-screen-small.png") center center no-repeat;
@@ -639,8 +666,15 @@ a {
   background-color: #222222; }
   .apps-left h1 {
     position: absolute;
-    top: 6%;
+    top: 20px;
     right: 0;
+    margin: 10px 0;
+    color: white; }
+  .apps-left h3 {
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    margin: 10px 0;
     color: white; }
 
 .apps-right {
@@ -651,8 +685,14 @@ a {
   background-color: #ffffff; }
   .apps-right h1 {
     position: absolute;
-    top: 6%;
-    left: 0; }
+    top: 20px;
+    left: 0;
+    margin: 10px 0; }
+  .apps-right h3 {
+    position: absolute;
+    top: 90px;
+    left: 3px;
+    margin: 10px 0; }
 
 .design-wrapper {
   position: absolute;
@@ -691,14 +731,7 @@ a {
     -webkit-filter: grayscale(0);
     filter: grayscale(0); }
 
-@media screen and (max-height: 650px) {
-  .design-wrapper {
-    height: 400px;
-    width: 200px; } }
-@media screen and (max-height: 500px) {
-  .app-designs .apps-right h1, .app-designs .apps-left h1 {
-    font-size: 24pt; } }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .app-designs {
     height: 200vh; }
 
@@ -708,6 +741,10 @@ a {
     width: 100%; }
     .apps-left h1 {
       display: none; }
+    .apps-left h3 {
+      display: none; }
+    .apps-left .design-wrapper {
+      top: 50%; }
 
   .apps-right {
     position: relative;
@@ -721,12 +758,35 @@ a {
       margin: 25px auto; }
     .apps-right h1 span.hide {
       display: inline-block; }
-
-  .design-wrapper {
-    top: 52%; } }
+    .apps-right h3 {
+      position: relative;
+      display: block;
+      text-align: center;
+      top: 0;
+      margin: 25px auto; }
+    .apps-right h3 span.hide {
+      display: inline-block; }
+    .apps-right .design-wrapper {
+      top: 55%; } }
 @media screen and (max-width: 350px) {
   .apps-right h1 {
     font-size: 28pt; } }
+@media screen and (max-height: 650px) {
+  .design-wrapper {
+    height: 400px;
+    width: 200px; } }
+@media screen and (max-height: 600px) {
+  .app-designs .apps-right h1, .app-designs .apps-left h1 {
+    font-size: 24pt;
+    margin: 20px auto; }
+
+  .app-designs .apps-right h3, .app-designs .apps-left h3 {
+    font-size: 12pt;
+    margin: 0 auto; } }
+@media screen and (max-height: 480px) {
+  .design-wrapper {
+    height: 300px;
+    width: 150px; } }
 .footer {
   position: relative;
   height: 100vh;
