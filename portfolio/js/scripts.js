@@ -25,43 +25,51 @@
 
 $(document).ready(function(){
 
+  //menu hide and show
+
   var didScroll;
   var lastScrollTop = 0;
-  var delta = 30;
+  var delta = 20;
   var navbarHeight = $('#menu-burger').outerHeight();
 
   $(window).scroll(function(event){
-      didScroll = true;
+    didScroll = true;
   });
 
   setInterval(function() {
-      if (didScroll) {
-          hasScrolled();
-          didScroll = false;
-      }
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
   }, 250);
 
   function hasScrolled() {
       var st = $(this).scrollTop();
-
-      // Make sure they scroll more than delta
       if(Math.abs(lastScrollTop - st) <= delta)
           return;
-
-      // If they scrolled down and are past the navbar, add class .nav-up.
-      // This is necessary so you never see what is "behind" the navbar.
       if (st > lastScrollTop && st > navbarHeight){
-          // Scroll Down
           $('#menu-burger').removeClass('nav-up').addClass('nav-down');
       } else {
-          // Scroll Up
           if(st + $(window).height() < $(document).height()) {
               $('#menu-burger').removeClass('nav-down').addClass('nav-up');
           }
       }
-
-      lastScrollTop = st;
+    lastScrollTop = st;
   }
+
+  $('img#menu-burger').click(function() {
+    $('.menu').removeClass('hide-menu');
+    $('.menu').addClass('show-menu');
+    $('a.menu-close').fadeIn(50);
+  });
+
+  $('.menu a').click(function() {
+    $('.menu').removeClass('show-menu');
+    $('.menu').addClass('hide-menu');
+    $('a.menu-close').fadeOut(50);
+  });
+
+  //in-page links
 
   $(document).on('click', 'a.scroll', function(event) {
     event.preventDefault();
@@ -71,11 +79,11 @@ $(document).ready(function(){
     var scrollPosition = $( $.attr(this, 'href') ).offset().top;
     var pageSection = $(this).attr('href');
     var url = pageSection.substr(1).slice(0, -8);
-    console.log(scrollPosition + " " + url);
-    location.hash = "#" + url + "-section";
-    history.replaceState("", "", url);
-    return;
+    history.pushState("", "", url);
+    return false;
   });
+
+  //about section details
 
   $('#hey-im-ethan').click(function(){
     $('#ethan-detail').fadeIn('slow', function(){    });
@@ -94,20 +102,22 @@ $(document).ready(function(){
     $('.pdx-rider').addClass('ride');
   });
 
-
+  //project info hide and show
 
   $('.more').click(function(){
-    var project = $(this).parents('.project-wrapper').attr('id');
+    var projectSection = $(this).parents('.project-wrapper').attr('id');
+    var project = projectSection.slice(0, -8);
     $('#' + project + '-title').addClass('spin');
     $('#' + project + '-title').children('img.project-name, a.more').fadeOut(100);
     $('#' + project + '-info').fadeIn(800);
     if (project === "cold-brew") {
-      $('#cold-brew').animate({backgroundPositionX: "12%"}, 600);
+      $('#cold-brew-section').animate({backgroundPositionX: "12%"}, 600);
     }
   });
 
   $('.close').click(function(){
-    var project = $(this).parents('.project-wrapper').attr('id');
+    var projectSection = $(this).parents('.project-wrapper').attr('id');
+    var project = projectSection.slice(0, -8);
     $('#' + project + '-title').removeClass('spin');
     var reappear = function() {
       $('#' + project + '-title').children('img.project-name, a.more').fadeIn(600);
@@ -115,11 +125,11 @@ $(document).ready(function(){
     window.setTimeout(reappear, 1000);
     $('#' + project + '-info').fadeOut(800);
     if (project === "cold-brew") {
-      $('#cold-brew').animate({backgroundPositionX: "50%"}, 600);
+      $('#cold-brew-section').animate({backgroundPositionX: "50%"}, 600);
     }
   });
 
-  //App Design Slider
+  //app design slider
 
   var sliderIndex = 1;
   $('.screens-wrapper').click(function(){
@@ -142,6 +152,5 @@ $(document).ready(function(){
       }
     });
   });
-
 
 });

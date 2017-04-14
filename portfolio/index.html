@@ -13,15 +13,33 @@
   </head>
   <body>
     <div class="container" id="page">
-      <img class="menu menu-hidden" id="menu-burger" src="img/menu-burger.png" alt="menu">
+      <img class="menu-burger menu-hidden" id="menu-burger" src="img/menu-burger.png" alt="menu button">
+      <div class="menu">
+        <ul>
+          <li id="menu-home">
+            <a class="scroll" href="#page">
+              <span class="menu-text">Home</span>
+            </a>
+          </li>
+          <li id="menu-about">
+            <a class="scroll" href="#about-section">
+              <span class="menu-text">About</span>
+            </a>
+          </li>
+          <li id="menu-work">
+            <a class="scroll" href="#work-section">
+              <span class="menu-text">Work</span>
+            </a>
+          </li>
+          <li id="menu-contact">
+            <a class="scroll" href="#contact-section">
+              <span class="menu-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+        <a class="menu-close">x</a>
+      </div>
       <div class="landing section" id="landing-section">
-        <!-- <div class="nav">
-          <ul>
-            <li id="about"><a class="scroll" href="#about-section">About</a></li>
-            <li id="work"><a class="scroll" href="#work-section">Work</a></li>
-            <li id="contact"><a class="scroll" href="#contact-section">Contact</a></li>
-          </ul>
-        </div> -->
         <div class="title">
           <h1>Ethan Law</h1>
           <div class="title-detail">
@@ -35,17 +53,6 @@
           </a>
           <a href="https://www.linkedin.com/in/ethan-law" target="_blank">
             <img src="img/linkedin-icon-light.png" alt="linkedin profile">
-          </a>
-        </div>
-        <div class="down-arrow">
-          <a  class="scroll" href="#about-section">
-            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                    </g>
-                </g>
-            </svg>
           </a>
         </div>
       </div>
@@ -94,17 +101,6 @@
         <div class="pdx-rider">
           <img src="img/pdx-rider.png" alt="naked bike rider">
         </div>
-        <div class="down-arrow">
-          <a  class="scroll" href="#work-section">
-            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                    </g>
-                </g>
-            </svg>
-          </a>
-        </div>
       </div>
       <div class="work-header">
         <a href="#work-section" class="scroll">
@@ -112,7 +108,7 @@
         </a>
       </div>
       <div class="section" id="work-section">
-        <div class="project-wrapper" id="dark-sky">
+        <div class="project-wrapper" id="dark-sky-section">
           <div class="project-title" id="dark-sky-title">
             <img class="project-logo" src="img/dark-sky-logo-light.png" alt="telescope">
             <img class="project-name" src="img/dark-sky-title.png" alt="Dark Sky Finder">
@@ -138,20 +134,8 @@
               </div>
             </div>
           </div>
-          <div class="down-arrow">
-            <a  class="scroll" href="#cold-brew">
-              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                      </g>
-                  </g>
-              </svg>
-            </a>
-          </div>
         </div>
-
-        <div class="project-wrapper" id="cold-brew">
+        <div class="project-wrapper" id="cold-brew-section">
           <div class="project-title" id="cold-brew-title">
             <a class="more" id="cold-brew-more">MORE</a>
           </div>
@@ -174,19 +158,8 @@
               </div>
             </div>
           </div>
-          <div class="down-arrow">
-            <a  class="scroll" href="#character-generator">
-              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                      </g>
-                  </g>
-              </svg>
-            </a>
-          </div>
         </div>
-        <div class="project-wrapper light" id="character-generator">
+        <div class="project-wrapper light" id="character-generator-section">
           <div class="project-title" id="character-generator-title">
             <img class="project-logo" src="img/5e-cg-logo.png" alt="d20">
 
@@ -213,17 +186,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="down-arrow">
-            <a  class="scroll" href="#apps-section">
-              <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                          <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                      </g>
-                  </g>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -255,17 +217,6 @@
               <img id="quantum-screen-5" src="img/quantum app screens/quantum-calendar.jpg" alt="quantum calendar screen">
             </div>
           </div>
-        </div>
-        <div class="down-arrow">
-          <a  class="scroll" href="#contact-section">
-            <svg width="142px" height="71px" viewBox="0 0 142 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Icons" transform="translate(-1169.000000, -261.000000)" fill="#eeeeee">
-                        <polygon id="Rectangle-28" transform="translate(1240.000000, 261.000000) rotate(45.000000) translate(-1240.000000, -261.000000) " points="1290 211 1290 311 1190 311"></polygon>
-                    </g>
-                </g>
-            </svg>
-          </a>
         </div>
       </div>
       <div class="footer section" id="contact-section">

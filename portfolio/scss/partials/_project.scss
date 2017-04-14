@@ -1,3 +1,5 @@
+
+
 .work-header {
   position: relative;
   height: 150px;
@@ -205,22 +207,22 @@
   }
 }
 
-#character-generator {
+#character-generator-section {
   @include background-image("../img/tiamet.jpg");
   .project-title img.project-name {
     top: 10px;
   }
 }
 
-#cold-brew  {
+#cold-brew-section  {
   @include background-image("../img/yerba-screen-small.png");
   background-size: 60vh;
   a.close {
     color: white;
-    background: black;
+    background: #333333;
   }
 }
 
-#dark-sky {
+#dark-sky-section {
   @include background-image("../img/dark-sky-hero-background.png");
 }
