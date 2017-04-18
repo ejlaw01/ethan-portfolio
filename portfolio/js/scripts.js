@@ -131,14 +131,14 @@ $(document).ready(function(){
          break;
         }
       }
+      $('.vNav ul li a').removeClass('active');
+      $('.vNav ul li a:eq('+index+')').addClass('active');
     } else if (position > ($('#contact-section').offset().top - viewHeight)) {
       $('.vNav').css('position', 'absolute');
       $('.vNav').css('top', 'auto');
       $('.vNav').css('bottom', viewHeight*.5);
       $('.vNav').css('transform', 'translate(0, 50%)')
     }
-    $('.vNav ul li a').removeClass('active');
-    $('.vNav ul li a:eq('+index+')').addClass('active');
   });
 
   $('.vNav ul li a').click(function () {

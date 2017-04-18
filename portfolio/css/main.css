@@ -495,7 +495,7 @@ a.menu-close {
     font-size: 1em; } }
 
 .vNav {
-  position: fixed;
+  position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
