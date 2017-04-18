@@ -14,15 +14,6 @@
 //   }
 // }
 
-// function inPagePathing(){
-//   var scrollPosition = $( $.attr(this, 'href') ).offset().top;
-//   var pageSection = $(this).attr('href');
-//   var url = pageSection.substr(1).slice(0, -8);
-//   console.log(scrollPosition + " " + url);
-//   location.hash = "#" + url + "-section";
-//   history.replaceState("", "", url);
-// }
-
 $(document).ready(function(){
 
   //menu hide and show
@@ -38,22 +29,22 @@ $(document).ready(function(){
 
   setInterval(function() {
     if (didScroll) {
-        hasScrolled();
-        didScroll = false;
+      hasScrolled();
+      didScroll = false;
     }
   }, 250);
 
   function hasScrolled() {
-      var st = $(this).scrollTop();
-      if(Math.abs(lastScrollTop - st) <= delta)
-          return;
-      if (st > lastScrollTop && st > navbarHeight){
-          $('#menu-burger').removeClass('nav-up').addClass('nav-down');
-      } else {
-          if(st + $(window).height() < $(document).height()) {
-              $('#menu-burger').removeClass('nav-down').addClass('nav-up');
-          }
+    var st = $(this).scrollTop();
+    if(Math.abs(lastScrollTop - st) <= delta)
+      return;
+    if (st > lastScrollTop && st > navbarHeight){
+      $('#menu-burger').removeClass('nav-up').addClass('nav-down');
+    } else {
+      if (st + $(window).height() < $(document).height()) {
+        $('#menu-burger').removeClass('nav-down').addClass('nav-up');
       }
+    }
     lastScrollTop = st;
   }
 
@@ -100,6 +91,63 @@ $(document).ready(function(){
   });
   $('#portland-or').click(function(){
     $('.pdx-rider').addClass('ride');
+  });
+
+  //dot navigation
+
+  var parPosition = [];
+  var viewHeight = $(window).height();
+
+  var findPositions = function() {
+    parPosition = [];
+    $('.par').each(function() {
+      parPosition.push($(this).offset().top);
+    });
+  }
+
+  findPositions();
+  $(window).resize(function() {
+    setInterval(function() {
+      findPositions();
+    }, 250);
+  });
+
+  $(document).scroll(function(){
+    var position = $(document).scrollTop(),
+    index;
+    if (position < parPosition[0]) {
+      $('.vNav').css('position', 'absolute');
+      $('.vNav').css('top', viewHeight*.5);
+      $('.vNav').css('bottom', 'auto');
+      $('.vNav').css('transform', 'translate(0, -50%)')
+    } else if (position >= parPosition[0] && position <= ($('#contact-section').offset().top - viewHeight)) {
+      $('.vNav').css('position', 'fixed');
+      $('.vNav').css('top', '50%');
+      $('.vNav').css('bottom', 'auto');
+      $('.vNav').css('transform', 'translate(0, -50%)');
+      for (var i = 0; i < parPosition.length; i++) {
+       if (position <= parPosition[i] + viewHeight*.6) {
+         index = i;
+         break;
+        }
+      }
+    } else if (position > ($('#contact-section').offset().top - viewHeight)) {
+      $('.vNav').css('position', 'absolute');
+      $('.vNav').css('top', 'auto');
+      $('.vNav').css('bottom', viewHeight*.5);
+      $('.vNav').css('transform', 'translate(0, 50%)')
+    }
+    $('.vNav ul li a').removeClass('active');
+    $('.vNav ul li a:eq('+index+')').addClass('active');
+  });
+
+  $('.vNav ul li a').click(function () {
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 800);
+    $('.vNav ul li a').removeClass('active');
+    $(this).addClass('active');
+    return false;
   });
 
   //project info hide and show

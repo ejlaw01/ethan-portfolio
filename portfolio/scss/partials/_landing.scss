@@ -27,6 +27,8 @@
   left: 20px;
   opacity: 1;
   z-index: 1;
+  -webkit-transition: top .5s ease-in-out;
+  -moz-transition: top .5s ease-in-out;
   transition: top .5s ease-in-out;
 }
 
@@ -41,6 +43,8 @@
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: transform .6s;
+  -moz-transition: transform .6s;
   transition: transform .6s;
   @media screen and (max-width: 450px) {
     width: 100%;
@@ -52,6 +56,7 @@
       width: 100%;
       height: 25%;
       -webkit-transition: all .6s;
+      -moz-transition: all .6s;
       transition: all .6s;
       &:hover {
         background-color: #333333;
@@ -125,6 +130,8 @@ a.menu-close {
       padding: 20px 30px;
       a {
         display: inline-block;
+        -webkit-transition: color .5s ease-in;
+        -moz-transition: color .5s ease-in;
         transition: color .5s ease-in;
         color: white;
         font-weight: 400;
@@ -183,6 +190,8 @@ a.menu-close {
     transform: translateX(-50%);
     height: 20px;
     opacity: .5;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
     transition: opacity .5s;
     &:hover {
       opacity: 1;
